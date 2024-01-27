@@ -1,0 +1,2282 @@
+You choose the local search option :-)
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Nov  1 2023
+Include files last modified date:    Jul 23 2021
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.5.0
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.5.0 is based on various versions of Murphi.
+Caching Murphi Release 5.5.0 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: test
+
+Algorithm:
+	Verification by our local search.
+	with symmetry algorithm 3 -- Heuristic Small Memory Normalization
+	with permutation trial limit 10.
+
+Memory usage:
+
+	* The size of each state is 7312 bits (rounded up to 920 bytes).
+	* The memory allocated for the hash table and state queue is
+	  20971 Mbytes.
+	  With two words of overhead per state, the maximum size of
+	  the state space is 22010413 states.
+	   * Use option "-k" or "-m" to increase this, if necessary.
+	* Capacity in queue for breadth-first search: 2201041 states.
+	   * Change the constant gPercentActiveStates in mu_prolog.inc
+	     to increase this, if necessary.
+
+Warning: No trace will not be printed in the case of protocol errors!
+         Check the options if you want to have error traces.
+==========================================================================
+
+You are using local search algorithm (Version 1) :
+
+------------- Show Goalstate: ------------------
+Tree[1].cache.used:0
+Tree[1].cache.line[1].addr:Undefined
+Tree[1].cache.line[1].state:Undefined
+Tree[1].cache.line[1].data:Undefined
+Tree[1].cache.line[1].dirty:Undefined
+Tree[1].cache.line[2].addr:Undefined
+Tree[1].cache.line[2].state:Undefined
+Tree[1].cache.line[2].data:Undefined
+Tree[1].cache.line[2].dirty:Undefined
+Tree[1].cache.valid[1]:0
+Tree[1].cache.valid[2]:0
+Tree[1].sons[1]:2
+Tree[1].sons[2]:3
+Tree[1].directory[1][1]:None
+Tree[1].directory[1][2]:None
+Tree[1].directory[2][1]:None
+Tree[1].directory[2][2]:None
+Tree[1].slave_pending[1][1]:Undefined
+Tree[1].slave_pending[1][2]:Undefined
+Tree[1].slave_pending[2][1]:Undefined
+Tree[1].slave_pending[2][2]:Undefined
+Tree[1].master_pending[1]:Undefined
+Tree[1].master_pending[2]:Undefined
+Tree[1].reqId:Undefined
+Tree[1].chan1[1].buffer[1].opcode:Undefined
+Tree[1].chan1[1].buffer[1].para:Undefined
+Tree[1].chan1[1].buffer[1].addr:Undefined
+Tree[1].chan1[1].buffer[1].data:Undefined
+Tree[1].chan1[1].buffer[1].dirty:Undefined
+Tree[1].chan1[1].buffer[2].opcode:Undefined
+Tree[1].chan1[1].buffer[2].para:Undefined
+Tree[1].chan1[1].buffer[2].addr:Undefined
+Tree[1].chan1[1].buffer[2].data:Undefined
+Tree[1].chan1[1].buffer[2].dirty:Undefined
+Tree[1].chan1[1].used:0
+Tree[1].chan1[2].buffer[1].opcode:Undefined
+Tree[1].chan1[2].buffer[1].para:Undefined
+Tree[1].chan1[2].buffer[1].addr:Undefined
+Tree[1].chan1[2].buffer[1].data:Undefined
+Tree[1].chan1[2].buffer[1].dirty:Undefined
+Tree[1].chan1[2].buffer[2].opcode:Undefined
+Tree[1].chan1[2].buffer[2].para:Undefined
+Tree[1].chan1[2].buffer[2].addr:Undefined
+Tree[1].chan1[2].buffer[2].data:Undefined
+Tree[1].chan1[2].buffer[2].dirty:Undefined
+Tree[1].chan1[2].used:0
+Tree[1].chan2[1].buffer[1].opcode:Undefined
+Tree[1].chan2[1].buffer[1].para:Undefined
+Tree[1].chan2[1].buffer[1].addr:Undefined
+Tree[1].chan2[1].buffer[1].data:Undefined
+Tree[1].chan2[1].buffer[1].dirty:Undefined
+Tree[1].chan2[1].buffer[2].opcode:Undefined
+Tree[1].chan2[1].buffer[2].para:Undefined
+Tree[1].chan2[1].buffer[2].addr:Undefined
+Tree[1].chan2[1].buffer[2].data:Undefined
+Tree[1].chan2[1].buffer[2].dirty:Undefined
+Tree[1].chan2[1].used:0
+Tree[1].chan2[2].buffer[1].opcode:Undefined
+Tree[1].chan2[2].buffer[1].para:Undefined
+Tree[1].chan2[2].buffer[1].addr:Undefined
+Tree[1].chan2[2].buffer[1].data:Undefined
+Tree[1].chan2[2].buffer[1].dirty:Undefined
+Tree[1].chan2[2].buffer[2].opcode:Undefined
+Tree[1].chan2[2].buffer[2].para:Undefined
+Tree[1].chan2[2].buffer[2].addr:Undefined
+Tree[1].chan2[2].buffer[2].data:Undefined
+Tree[1].chan2[2].buffer[2].dirty:Undefined
+Tree[1].chan2[2].used:0
+Tree[1].chan3[1].buffer[1].opcode:Undefined
+Tree[1].chan3[1].buffer[1].para:Undefined
+Tree[1].chan3[1].buffer[1].addr:Undefined
+Tree[1].chan3[1].buffer[1].data:Undefined
+Tree[1].chan3[1].buffer[1].dirty:Undefined
+Tree[1].chan3[1].buffer[2].opcode:Undefined
+Tree[1].chan3[1].buffer[2].para:Undefined
+Tree[1].chan3[1].buffer[2].addr:Undefined
+Tree[1].chan3[1].buffer[2].data:Undefined
+Tree[1].chan3[1].buffer[2].dirty:Undefined
+Tree[1].chan3[1].used:0
+Tree[1].chan3[2].buffer[1].opcode:Undefined
+Tree[1].chan3[2].buffer[1].para:Undefined
+Tree[1].chan3[2].buffer[1].addr:Undefined
+Tree[1].chan3[2].buffer[1].data:Undefined
+Tree[1].chan3[2].buffer[1].dirty:Undefined
+Tree[1].chan3[2].buffer[2].opcode:Undefined
+Tree[1].chan3[2].buffer[2].para:Undefined
+Tree[1].chan3[2].buffer[2].addr:Undefined
+Tree[1].chan3[2].buffer[2].data:Undefined
+Tree[1].chan3[2].buffer[2].dirty:Undefined
+Tree[1].chan3[2].used:0
+Tree[1].chan4[1].buffer[1].opcode:Undefined
+Tree[1].chan4[1].buffer[1].para:Undefined
+Tree[1].chan4[1].buffer[1].addr:Undefined
+Tree[1].chan4[1].buffer[1].data:Undefined
+Tree[1].chan4[1].buffer[1].dirty:Undefined
+Tree[1].chan4[1].buffer[2].opcode:Undefined
+Tree[1].chan4[1].buffer[2].para:Undefined
+Tree[1].chan4[1].buffer[2].addr:Undefined
+Tree[1].chan4[1].buffer[2].data:Undefined
+Tree[1].chan4[1].buffer[2].dirty:Undefined
+Tree[1].chan4[1].used:0
+Tree[1].chan4[2].buffer[1].opcode:Undefined
+Tree[1].chan4[2].buffer[1].para:Undefined
+Tree[1].chan4[2].buffer[1].addr:Undefined
+Tree[1].chan4[2].buffer[1].data:Undefined
+Tree[1].chan4[2].buffer[1].dirty:Undefined
+Tree[1].chan4[2].buffer[2].opcode:Undefined
+Tree[1].chan4[2].buffer[2].para:Undefined
+Tree[1].chan4[2].buffer[2].addr:Undefined
+Tree[1].chan4[2].buffer[2].data:Undefined
+Tree[1].chan4[2].buffer[2].dirty:Undefined
+Tree[1].chan4[2].used:0
+Tree[1].chan5[1].buffer[1].opcode:Undefined
+Tree[1].chan5[1].buffer[1].addr:Undefined
+Tree[1].chan5[1].buffer[1].data:Undefined
+Tree[1].chan5[1].buffer[1].dirty:Undefined
+Tree[1].chan5[1].buffer[2].opcode:Undefined
+Tree[1].chan5[1].buffer[2].addr:Undefined
+Tree[1].chan5[1].buffer[2].data:Undefined
+Tree[1].chan5[1].buffer[2].dirty:Undefined
+Tree[1].chan5[1].used:0
+Tree[1].chan5[2].buffer[1].opcode:Undefined
+Tree[1].chan5[2].buffer[1].addr:Undefined
+Tree[1].chan5[2].buffer[1].data:Undefined
+Tree[1].chan5[2].buffer[1].dirty:Undefined
+Tree[1].chan5[2].buffer[2].opcode:Undefined
+Tree[1].chan5[2].buffer[2].addr:Undefined
+Tree[1].chan5[2].buffer[2].data:Undefined
+Tree[1].chan5[2].buffer[2].dirty:Undefined
+Tree[1].chan5[2].used:0
+Tree[2].cache.used:0
+Tree[2].cache.line[1].addr:Undefined
+Tree[2].cache.line[1].state:Undefined
+Tree[2].cache.line[1].data:Undefined
+Tree[2].cache.line[1].dirty:Undefined
+Tree[2].cache.line[2].addr:Undefined
+Tree[2].cache.line[2].state:Undefined
+Tree[2].cache.line[2].data:Undefined
+Tree[2].cache.line[2].dirty:Undefined
+Tree[2].cache.valid[1]:0
+Tree[2].cache.valid[2]:0
+Tree[2].sons[1]:4
+Tree[2].sons[2]:5
+Tree[2].directory[1][1]:None
+Tree[2].directory[1][2]:None
+Tree[2].directory[2][1]:None
+Tree[2].directory[2][2]:None
+Tree[2].slave_pending[1][1]:Undefined
+Tree[2].slave_pending[1][2]:Undefined
+Tree[2].slave_pending[2][1]:Undefined
+Tree[2].slave_pending[2][2]:Undefined
+Tree[2].master_pending[1]:Undefined
+Tree[2].master_pending[2]:Undefined
+Tree[2].reqId:Undefined
+Tree[2].chan1[1].buffer[1].opcode:Undefined
+Tree[2].chan1[1].buffer[1].para:Undefined
+Tree[2].chan1[1].buffer[1].addr:Undefined
+Tree[2].chan1[1].buffer[1].data:Undefined
+Tree[2].chan1[1].buffer[1].dirty:Undefined
+Tree[2].chan1[1].buffer[2].opcode:Undefined
+Tree[2].chan1[1].buffer[2].para:Undefined
+Tree[2].chan1[1].buffer[2].addr:Undefined
+Tree[2].chan1[1].buffer[2].data:Undefined
+Tree[2].chan1[1].buffer[2].dirty:Undefined
+Tree[2].chan1[1].used:0
+Tree[2].chan1[2].buffer[1].opcode:Undefined
+Tree[2].chan1[2].buffer[1].para:Undefined
+Tree[2].chan1[2].buffer[1].addr:Undefined
+Tree[2].chan1[2].buffer[1].data:Undefined
+Tree[2].chan1[2].buffer[1].dirty:Undefined
+Tree[2].chan1[2].buffer[2].opcode:Undefined
+Tree[2].chan1[2].buffer[2].para:Undefined
+Tree[2].chan1[2].buffer[2].addr:Undefined
+Tree[2].chan1[2].buffer[2].data:Undefined
+Tree[2].chan1[2].buffer[2].dirty:Undefined
+Tree[2].chan1[2].used:0
+Tree[2].chan2[1].buffer[1].opcode:Undefined
+Tree[2].chan2[1].buffer[1].para:Undefined
+Tree[2].chan2[1].buffer[1].addr:Undefined
+Tree[2].chan2[1].buffer[1].data:Undefined
+Tree[2].chan2[1].buffer[1].dirty:Undefined
+Tree[2].chan2[1].buffer[2].opcode:Undefined
+Tree[2].chan2[1].buffer[2].para:Undefined
+Tree[2].chan2[1].buffer[2].addr:Undefined
+Tree[2].chan2[1].buffer[2].data:Undefined
+Tree[2].chan2[1].buffer[2].dirty:Undefined
+Tree[2].chan2[1].used:0
+Tree[2].chan2[2].buffer[1].opcode:Undefined
+Tree[2].chan2[2].buffer[1].para:Undefined
+Tree[2].chan2[2].buffer[1].addr:Undefined
+Tree[2].chan2[2].buffer[1].data:Undefined
+Tree[2].chan2[2].buffer[1].dirty:Undefined
+Tree[2].chan2[2].buffer[2].opcode:Undefined
+Tree[2].chan2[2].buffer[2].para:Undefined
+Tree[2].chan2[2].buffer[2].addr:Undefined
+Tree[2].chan2[2].buffer[2].data:Undefined
+Tree[2].chan2[2].buffer[2].dirty:Undefined
+Tree[2].chan2[2].used:0
+Tree[2].chan3[1].buffer[1].opcode:Undefined
+Tree[2].chan3[1].buffer[1].para:Undefined
+Tree[2].chan3[1].buffer[1].addr:Undefined
+Tree[2].chan3[1].buffer[1].data:Undefined
+Tree[2].chan3[1].buffer[1].dirty:Undefined
+Tree[2].chan3[1].buffer[2].opcode:Undefined
+Tree[2].chan3[1].buffer[2].para:Undefined
+Tree[2].chan3[1].buffer[2].addr:Undefined
+Tree[2].chan3[1].buffer[2].data:Undefined
+Tree[2].chan3[1].buffer[2].dirty:Undefined
+Tree[2].chan3[1].used:0
+Tree[2].chan3[2].buffer[1].opcode:Undefined
+Tree[2].chan3[2].buffer[1].para:Undefined
+Tree[2].chan3[2].buffer[1].addr:Undefined
+Tree[2].chan3[2].buffer[1].data:Undefined
+Tree[2].chan3[2].buffer[1].dirty:Undefined
+Tree[2].chan3[2].buffer[2].opcode:Undefined
+Tree[2].chan3[2].buffer[2].para:Undefined
+Tree[2].chan3[2].buffer[2].addr:Undefined
+Tree[2].chan3[2].buffer[2].data:Undefined
+Tree[2].chan3[2].buffer[2].dirty:Undefined
+Tree[2].chan3[2].used:0
+Tree[2].chan4[1].buffer[1].opcode:Undefined
+Tree[2].chan4[1].buffer[1].para:Undefined
+Tree[2].chan4[1].buffer[1].addr:Undefined
+Tree[2].chan4[1].buffer[1].data:Undefined
+Tree[2].chan4[1].buffer[1].dirty:Undefined
+Tree[2].chan4[1].buffer[2].opcode:Undefined
+Tree[2].chan4[1].buffer[2].para:Undefined
+Tree[2].chan4[1].buffer[2].addr:Undefined
+Tree[2].chan4[1].buffer[2].data:Undefined
+Tree[2].chan4[1].buffer[2].dirty:Undefined
+Tree[2].chan4[1].used:0
+Tree[2].chan4[2].buffer[1].opcode:Undefined
+Tree[2].chan4[2].buffer[1].para:Undefined
+Tree[2].chan4[2].buffer[1].addr:Undefined
+Tree[2].chan4[2].buffer[1].data:Undefined
+Tree[2].chan4[2].buffer[1].dirty:Undefined
+Tree[2].chan4[2].buffer[2].opcode:Undefined
+Tree[2].chan4[2].buffer[2].para:Undefined
+Tree[2].chan4[2].buffer[2].addr:Undefined
+Tree[2].chan4[2].buffer[2].data:Undefined
+Tree[2].chan4[2].buffer[2].dirty:Undefined
+Tree[2].chan4[2].used:0
+Tree[2].chan5[1].buffer[1].opcode:Undefined
+Tree[2].chan5[1].buffer[1].addr:Undefined
+Tree[2].chan5[1].buffer[1].data:Undefined
+Tree[2].chan5[1].buffer[1].dirty:Undefined
+Tree[2].chan5[1].buffer[2].opcode:Undefined
+Tree[2].chan5[1].buffer[2].addr:Undefined
+Tree[2].chan5[1].buffer[2].data:Undefined
+Tree[2].chan5[1].buffer[2].dirty:Undefined
+Tree[2].chan5[1].used:0
+Tree[2].chan5[2].buffer[1].opcode:Undefined
+Tree[2].chan5[2].buffer[1].addr:Undefined
+Tree[2].chan5[2].buffer[1].data:Undefined
+Tree[2].chan5[2].buffer[1].dirty:Undefined
+Tree[2].chan5[2].buffer[2].opcode:Undefined
+Tree[2].chan5[2].buffer[2].addr:Undefined
+Tree[2].chan5[2].buffer[2].data:Undefined
+Tree[2].chan5[2].buffer[2].dirty:Undefined
+Tree[2].chan5[2].used:0
+Tree[3].cache.used:0
+Tree[3].cache.line[1].addr:Undefined
+Tree[3].cache.line[1].state:Undefined
+Tree[3].cache.line[1].data:Undefined
+Tree[3].cache.line[1].dirty:Undefined
+Tree[3].cache.line[2].addr:Undefined
+Tree[3].cache.line[2].state:Undefined
+Tree[3].cache.line[2].data:Undefined
+Tree[3].cache.line[2].dirty:Undefined
+Tree[3].cache.valid[1]:0
+Tree[3].cache.valid[2]:0
+Tree[3].sons[1]:6
+Tree[3].sons[2]:7
+Tree[3].directory[1][1]:None
+Tree[3].directory[1][2]:None
+Tree[3].directory[2][1]:None
+Tree[3].directory[2][2]:None
+Tree[3].slave_pending[1][1]:Undefined
+Tree[3].slave_pending[1][2]:Undefined
+Tree[3].slave_pending[2][1]:Undefined
+Tree[3].slave_pending[2][2]:Undefined
+Tree[3].master_pending[1]:Undefined
+Tree[3].master_pending[2]:Undefined
+Tree[3].reqId:Undefined
+Tree[3].chan1[1].buffer[1].opcode:Undefined
+Tree[3].chan1[1].buffer[1].para:Undefined
+Tree[3].chan1[1].buffer[1].addr:Undefined
+Tree[3].chan1[1].buffer[1].data:Undefined
+Tree[3].chan1[1].buffer[1].dirty:Undefined
+Tree[3].chan1[1].buffer[2].opcode:Undefined
+Tree[3].chan1[1].buffer[2].para:Undefined
+Tree[3].chan1[1].buffer[2].addr:Undefined
+Tree[3].chan1[1].buffer[2].data:Undefined
+Tree[3].chan1[1].buffer[2].dirty:Undefined
+Tree[3].chan1[1].used:0
+Tree[3].chan1[2].buffer[1].opcode:Undefined
+Tree[3].chan1[2].buffer[1].para:Undefined
+Tree[3].chan1[2].buffer[1].addr:Undefined
+Tree[3].chan1[2].buffer[1].data:Undefined
+Tree[3].chan1[2].buffer[1].dirty:Undefined
+Tree[3].chan1[2].buffer[2].opcode:Undefined
+Tree[3].chan1[2].buffer[2].para:Undefined
+Tree[3].chan1[2].buffer[2].addr:Undefined
+Tree[3].chan1[2].buffer[2].data:Undefined
+Tree[3].chan1[2].buffer[2].dirty:Undefined
+Tree[3].chan1[2].used:0
+Tree[3].chan2[1].buffer[1].opcode:Undefined
+Tree[3].chan2[1].buffer[1].para:Undefined
+Tree[3].chan2[1].buffer[1].addr:Undefined
+Tree[3].chan2[1].buffer[1].data:Undefined
+Tree[3].chan2[1].buffer[1].dirty:Undefined
+Tree[3].chan2[1].buffer[2].opcode:Undefined
+Tree[3].chan2[1].buffer[2].para:Undefined
+Tree[3].chan2[1].buffer[2].addr:Undefined
+Tree[3].chan2[1].buffer[2].data:Undefined
+Tree[3].chan2[1].buffer[2].dirty:Undefined
+Tree[3].chan2[1].used:0
+Tree[3].chan2[2].buffer[1].opcode:Undefined
+Tree[3].chan2[2].buffer[1].para:Undefined
+Tree[3].chan2[2].buffer[1].addr:Undefined
+Tree[3].chan2[2].buffer[1].data:Undefined
+Tree[3].chan2[2].buffer[1].dirty:Undefined
+Tree[3].chan2[2].buffer[2].opcode:Undefined
+Tree[3].chan2[2].buffer[2].para:Undefined
+Tree[3].chan2[2].buffer[2].addr:Undefined
+Tree[3].chan2[2].buffer[2].data:Undefined
+Tree[3].chan2[2].buffer[2].dirty:Undefined
+Tree[3].chan2[2].used:0
+Tree[3].chan3[1].buffer[1].opcode:Undefined
+Tree[3].chan3[1].buffer[1].para:Undefined
+Tree[3].chan3[1].buffer[1].addr:Undefined
+Tree[3].chan3[1].buffer[1].data:Undefined
+Tree[3].chan3[1].buffer[1].dirty:Undefined
+Tree[3].chan3[1].buffer[2].opcode:Undefined
+Tree[3].chan3[1].buffer[2].para:Undefined
+Tree[3].chan3[1].buffer[2].addr:Undefined
+Tree[3].chan3[1].buffer[2].data:Undefined
+Tree[3].chan3[1].buffer[2].dirty:Undefined
+Tree[3].chan3[1].used:0
+Tree[3].chan3[2].buffer[1].opcode:Undefined
+Tree[3].chan3[2].buffer[1].para:Undefined
+Tree[3].chan3[2].buffer[1].addr:Undefined
+Tree[3].chan3[2].buffer[1].data:Undefined
+Tree[3].chan3[2].buffer[1].dirty:Undefined
+Tree[3].chan3[2].buffer[2].opcode:Undefined
+Tree[3].chan3[2].buffer[2].para:Undefined
+Tree[3].chan3[2].buffer[2].addr:Undefined
+Tree[3].chan3[2].buffer[2].data:Undefined
+Tree[3].chan3[2].buffer[2].dirty:Undefined
+Tree[3].chan3[2].used:0
+Tree[3].chan4[1].buffer[1].opcode:Undefined
+Tree[3].chan4[1].buffer[1].para:Undefined
+Tree[3].chan4[1].buffer[1].addr:Undefined
+Tree[3].chan4[1].buffer[1].data:Undefined
+Tree[3].chan4[1].buffer[1].dirty:Undefined
+Tree[3].chan4[1].buffer[2].opcode:Undefined
+Tree[3].chan4[1].buffer[2].para:Undefined
+Tree[3].chan4[1].buffer[2].addr:Undefined
+Tree[3].chan4[1].buffer[2].data:Undefined
+Tree[3].chan4[1].buffer[2].dirty:Undefined
+Tree[3].chan4[1].used:0
+Tree[3].chan4[2].buffer[1].opcode:Undefined
+Tree[3].chan4[2].buffer[1].para:Undefined
+Tree[3].chan4[2].buffer[1].addr:Undefined
+Tree[3].chan4[2].buffer[1].data:Undefined
+Tree[3].chan4[2].buffer[1].dirty:Undefined
+Tree[3].chan4[2].buffer[2].opcode:Undefined
+Tree[3].chan4[2].buffer[2].para:Undefined
+Tree[3].chan4[2].buffer[2].addr:Undefined
+Tree[3].chan4[2].buffer[2].data:Undefined
+Tree[3].chan4[2].buffer[2].dirty:Undefined
+Tree[3].chan4[2].used:0
+Tree[3].chan5[1].buffer[1].opcode:Undefined
+Tree[3].chan5[1].buffer[1].addr:Undefined
+Tree[3].chan5[1].buffer[1].data:Undefined
+Tree[3].chan5[1].buffer[1].dirty:Undefined
+Tree[3].chan5[1].buffer[2].opcode:Undefined
+Tree[3].chan5[1].buffer[2].addr:Undefined
+Tree[3].chan5[1].buffer[2].data:Undefined
+Tree[3].chan5[1].buffer[2].dirty:Undefined
+Tree[3].chan5[1].used:0
+Tree[3].chan5[2].buffer[1].opcode:Undefined
+Tree[3].chan5[2].buffer[1].addr:Undefined
+Tree[3].chan5[2].buffer[1].data:Undefined
+Tree[3].chan5[2].buffer[1].dirty:Undefined
+Tree[3].chan5[2].buffer[2].opcode:Undefined
+Tree[3].chan5[2].buffer[2].addr:Undefined
+Tree[3].chan5[2].buffer[2].data:Undefined
+Tree[3].chan5[2].buffer[2].dirty:Undefined
+Tree[3].chan5[2].used:0
+Tree[4].cache.used:0
+Tree[4].cache.line[1].addr:Undefined
+Tree[4].cache.line[1].state:Undefined
+Tree[4].cache.line[1].data:Undefined
+Tree[4].cache.line[1].dirty:Undefined
+Tree[4].cache.line[2].addr:Undefined
+Tree[4].cache.line[2].state:Undefined
+Tree[4].cache.line[2].data:Undefined
+Tree[4].cache.line[2].dirty:Undefined
+Tree[4].cache.valid[1]:0
+Tree[4].cache.valid[2]:0
+Tree[4].sons[1]:Undefined
+Tree[4].sons[2]:Undefined
+Tree[4].directory[1][1]:Undefined
+Tree[4].directory[1][2]:Undefined
+Tree[4].directory[2][1]:Undefined
+Tree[4].directory[2][2]:Undefined
+Tree[4].slave_pending[1][1]:Undefined
+Tree[4].slave_pending[1][2]:Undefined
+Tree[4].slave_pending[2][1]:Undefined
+Tree[4].slave_pending[2][2]:Undefined
+Tree[4].master_pending[1]:Undefined
+Tree[4].master_pending[2]:Undefined
+Tree[4].reqId:Undefined
+Tree[4].chan1[1].buffer[1].opcode:Undefined
+Tree[4].chan1[1].buffer[1].para:Undefined
+Tree[4].chan1[1].buffer[1].addr:Undefined
+Tree[4].chan1[1].buffer[1].data:Undefined
+Tree[4].chan1[1].buffer[1].dirty:Undefined
+Tree[4].chan1[1].buffer[2].opcode:Undefined
+Tree[4].chan1[1].buffer[2].para:Undefined
+Tree[4].chan1[1].buffer[2].addr:Undefined
+Tree[4].chan1[1].buffer[2].data:Undefined
+Tree[4].chan1[1].buffer[2].dirty:Undefined
+Tree[4].chan1[1].used:Undefined
+Tree[4].chan1[2].buffer[1].opcode:Undefined
+Tree[4].chan1[2].buffer[1].para:Undefined
+Tree[4].chan1[2].buffer[1].addr:Undefined
+Tree[4].chan1[2].buffer[1].data:Undefined
+Tree[4].chan1[2].buffer[1].dirty:Undefined
+Tree[4].chan1[2].buffer[2].opcode:Undefined
+Tree[4].chan1[2].buffer[2].para:Undefined
+Tree[4].chan1[2].buffer[2].addr:Undefined
+Tree[4].chan1[2].buffer[2].data:Undefined
+Tree[4].chan1[2].buffer[2].dirty:Undefined
+Tree[4].chan1[2].used:Undefined
+Tree[4].chan2[1].buffer[1].opcode:Undefined
+Tree[4].chan2[1].buffer[1].para:Undefined
+Tree[4].chan2[1].buffer[1].addr:Undefined
+Tree[4].chan2[1].buffer[1].data:Undefined
+Tree[4].chan2[1].buffer[1].dirty:Undefined
+Tree[4].chan2[1].buffer[2].opcode:Undefined
+Tree[4].chan2[1].buffer[2].para:Undefined
+Tree[4].chan2[1].buffer[2].addr:Undefined
+Tree[4].chan2[1].buffer[2].data:Undefined
+Tree[4].chan2[1].buffer[2].dirty:Undefined
+Tree[4].chan2[1].used:Undefined
+Tree[4].chan2[2].buffer[1].opcode:Undefined
+Tree[4].chan2[2].buffer[1].para:Undefined
+Tree[4].chan2[2].buffer[1].addr:Undefined
+Tree[4].chan2[2].buffer[1].data:Undefined
+Tree[4].chan2[2].buffer[1].dirty:Undefined
+Tree[4].chan2[2].buffer[2].opcode:Undefined
+Tree[4].chan2[2].buffer[2].para:Undefined
+Tree[4].chan2[2].buffer[2].addr:Undefined
+Tree[4].chan2[2].buffer[2].data:Undefined
+Tree[4].chan2[2].buffer[2].dirty:Undefined
+Tree[4].chan2[2].used:Undefined
+Tree[4].chan3[1].buffer[1].opcode:Undefined
+Tree[4].chan3[1].buffer[1].para:Undefined
+Tree[4].chan3[1].buffer[1].addr:Undefined
+Tree[4].chan3[1].buffer[1].data:Undefined
+Tree[4].chan3[1].buffer[1].dirty:Undefined
+Tree[4].chan3[1].buffer[2].opcode:Undefined
+Tree[4].chan3[1].buffer[2].para:Undefined
+Tree[4].chan3[1].buffer[2].addr:Undefined
+Tree[4].chan3[1].buffer[2].data:Undefined
+Tree[4].chan3[1].buffer[2].dirty:Undefined
+Tree[4].chan3[1].used:Undefined
+Tree[4].chan3[2].buffer[1].opcode:Undefined
+Tree[4].chan3[2].buffer[1].para:Undefined
+Tree[4].chan3[2].buffer[1].addr:Undefined
+Tree[4].chan3[2].buffer[1].data:Undefined
+Tree[4].chan3[2].buffer[1].dirty:Undefined
+Tree[4].chan3[2].buffer[2].opcode:Undefined
+Tree[4].chan3[2].buffer[2].para:Undefined
+Tree[4].chan3[2].buffer[2].addr:Undefined
+Tree[4].chan3[2].buffer[2].data:Undefined
+Tree[4].chan3[2].buffer[2].dirty:Undefined
+Tree[4].chan3[2].used:Undefined
+Tree[4].chan4[1].buffer[1].opcode:Undefined
+Tree[4].chan4[1].buffer[1].para:Undefined
+Tree[4].chan4[1].buffer[1].addr:Undefined
+Tree[4].chan4[1].buffer[1].data:Undefined
+Tree[4].chan4[1].buffer[1].dirty:Undefined
+Tree[4].chan4[1].buffer[2].opcode:Undefined
+Tree[4].chan4[1].buffer[2].para:Undefined
+Tree[4].chan4[1].buffer[2].addr:Undefined
+Tree[4].chan4[1].buffer[2].data:Undefined
+Tree[4].chan4[1].buffer[2].dirty:Undefined
+Tree[4].chan4[1].used:Undefined
+Tree[4].chan4[2].buffer[1].opcode:Undefined
+Tree[4].chan4[2].buffer[1].para:Undefined
+Tree[4].chan4[2].buffer[1].addr:Undefined
+Tree[4].chan4[2].buffer[1].data:Undefined
+Tree[4].chan4[2].buffer[1].dirty:Undefined
+Tree[4].chan4[2].buffer[2].opcode:Undefined
+Tree[4].chan4[2].buffer[2].para:Undefined
+Tree[4].chan4[2].buffer[2].addr:Undefined
+Tree[4].chan4[2].buffer[2].data:Undefined
+Tree[4].chan4[2].buffer[2].dirty:Undefined
+Tree[4].chan4[2].used:Undefined
+Tree[4].chan5[1].buffer[1].opcode:Undefined
+Tree[4].chan5[1].buffer[1].addr:Undefined
+Tree[4].chan5[1].buffer[1].data:Undefined
+Tree[4].chan5[1].buffer[1].dirty:Undefined
+Tree[4].chan5[1].buffer[2].opcode:Undefined
+Tree[4].chan5[1].buffer[2].addr:Undefined
+Tree[4].chan5[1].buffer[2].data:Undefined
+Tree[4].chan5[1].buffer[2].dirty:Undefined
+Tree[4].chan5[1].used:Undefined
+Tree[4].chan5[2].buffer[1].opcode:Undefined
+Tree[4].chan5[2].buffer[1].addr:Undefined
+Tree[4].chan5[2].buffer[1].data:Undefined
+Tree[4].chan5[2].buffer[1].dirty:Undefined
+Tree[4].chan5[2].buffer[2].opcode:Undefined
+Tree[4].chan5[2].buffer[2].addr:Undefined
+Tree[4].chan5[2].buffer[2].data:Undefined
+Tree[4].chan5[2].buffer[2].dirty:Undefined
+Tree[4].chan5[2].used:Undefined
+Tree[5].cache.used:0
+Tree[5].cache.line[1].addr:Undefined
+Tree[5].cache.line[1].state:Undefined
+Tree[5].cache.line[1].data:Undefined
+Tree[5].cache.line[1].dirty:Undefined
+Tree[5].cache.line[2].addr:Undefined
+Tree[5].cache.line[2].state:Undefined
+Tree[5].cache.line[2].data:Undefined
+Tree[5].cache.line[2].dirty:Undefined
+Tree[5].cache.valid[1]:0
+Tree[5].cache.valid[2]:0
+Tree[5].sons[1]:Undefined
+Tree[5].sons[2]:Undefined
+Tree[5].directory[1][1]:Undefined
+Tree[5].directory[1][2]:Undefined
+Tree[5].directory[2][1]:Undefined
+Tree[5].directory[2][2]:Undefined
+Tree[5].slave_pending[1][1]:Undefined
+Tree[5].slave_pending[1][2]:Undefined
+Tree[5].slave_pending[2][1]:Undefined
+Tree[5].slave_pending[2][2]:Undefined
+Tree[5].master_pending[1]:Undefined
+Tree[5].master_pending[2]:Undefined
+Tree[5].reqId:Undefined
+Tree[5].chan1[1].buffer[1].opcode:Undefined
+Tree[5].chan1[1].buffer[1].para:Undefined
+Tree[5].chan1[1].buffer[1].addr:Undefined
+Tree[5].chan1[1].buffer[1].data:Undefined
+Tree[5].chan1[1].buffer[1].dirty:Undefined
+Tree[5].chan1[1].buffer[2].opcode:Undefined
+Tree[5].chan1[1].buffer[2].para:Undefined
+Tree[5].chan1[1].buffer[2].addr:Undefined
+Tree[5].chan1[1].buffer[2].data:Undefined
+Tree[5].chan1[1].buffer[2].dirty:Undefined
+Tree[5].chan1[1].used:Undefined
+Tree[5].chan1[2].buffer[1].opcode:Undefined
+Tree[5].chan1[2].buffer[1].para:Undefined
+Tree[5].chan1[2].buffer[1].addr:Undefined
+Tree[5].chan1[2].buffer[1].data:Undefined
+Tree[5].chan1[2].buffer[1].dirty:Undefined
+Tree[5].chan1[2].buffer[2].opcode:Undefined
+Tree[5].chan1[2].buffer[2].para:Undefined
+Tree[5].chan1[2].buffer[2].addr:Undefined
+Tree[5].chan1[2].buffer[2].data:Undefined
+Tree[5].chan1[2].buffer[2].dirty:Undefined
+Tree[5].chan1[2].used:Undefined
+Tree[5].chan2[1].buffer[1].opcode:Undefined
+Tree[5].chan2[1].buffer[1].para:Undefined
+Tree[5].chan2[1].buffer[1].addr:Undefined
+Tree[5].chan2[1].buffer[1].data:Undefined
+Tree[5].chan2[1].buffer[1].dirty:Undefined
+Tree[5].chan2[1].buffer[2].opcode:Undefined
+Tree[5].chan2[1].buffer[2].para:Undefined
+Tree[5].chan2[1].buffer[2].addr:Undefined
+Tree[5].chan2[1].buffer[2].data:Undefined
+Tree[5].chan2[1].buffer[2].dirty:Undefined
+Tree[5].chan2[1].used:Undefined
+Tree[5].chan2[2].buffer[1].opcode:Undefined
+Tree[5].chan2[2].buffer[1].para:Undefined
+Tree[5].chan2[2].buffer[1].addr:Undefined
+Tree[5].chan2[2].buffer[1].data:Undefined
+Tree[5].chan2[2].buffer[1].dirty:Undefined
+Tree[5].chan2[2].buffer[2].opcode:Undefined
+Tree[5].chan2[2].buffer[2].para:Undefined
+Tree[5].chan2[2].buffer[2].addr:Undefined
+Tree[5].chan2[2].buffer[2].data:Undefined
+Tree[5].chan2[2].buffer[2].dirty:Undefined
+Tree[5].chan2[2].used:Undefined
+Tree[5].chan3[1].buffer[1].opcode:Undefined
+Tree[5].chan3[1].buffer[1].para:Undefined
+Tree[5].chan3[1].buffer[1].addr:Undefined
+Tree[5].chan3[1].buffer[1].data:Undefined
+Tree[5].chan3[1].buffer[1].dirty:Undefined
+Tree[5].chan3[1].buffer[2].opcode:Undefined
+Tree[5].chan3[1].buffer[2].para:Undefined
+Tree[5].chan3[1].buffer[2].addr:Undefined
+Tree[5].chan3[1].buffer[2].data:Undefined
+Tree[5].chan3[1].buffer[2].dirty:Undefined
+Tree[5].chan3[1].used:Undefined
+Tree[5].chan3[2].buffer[1].opcode:Undefined
+Tree[5].chan3[2].buffer[1].para:Undefined
+Tree[5].chan3[2].buffer[1].addr:Undefined
+Tree[5].chan3[2].buffer[1].data:Undefined
+Tree[5].chan3[2].buffer[1].dirty:Undefined
+Tree[5].chan3[2].buffer[2].opcode:Undefined
+Tree[5].chan3[2].buffer[2].para:Undefined
+Tree[5].chan3[2].buffer[2].addr:Undefined
+Tree[5].chan3[2].buffer[2].data:Undefined
+Tree[5].chan3[2].buffer[2].dirty:Undefined
+Tree[5].chan3[2].used:Undefined
+Tree[5].chan4[1].buffer[1].opcode:Undefined
+Tree[5].chan4[1].buffer[1].para:Undefined
+Tree[5].chan4[1].buffer[1].addr:Undefined
+Tree[5].chan4[1].buffer[1].data:Undefined
+Tree[5].chan4[1].buffer[1].dirty:Undefined
+Tree[5].chan4[1].buffer[2].opcode:Undefined
+Tree[5].chan4[1].buffer[2].para:Undefined
+Tree[5].chan4[1].buffer[2].addr:Undefined
+Tree[5].chan4[1].buffer[2].data:Undefined
+Tree[5].chan4[1].buffer[2].dirty:Undefined
+Tree[5].chan4[1].used:Undefined
+Tree[5].chan4[2].buffer[1].opcode:Undefined
+Tree[5].chan4[2].buffer[1].para:Undefined
+Tree[5].chan4[2].buffer[1].addr:Undefined
+Tree[5].chan4[2].buffer[1].data:Undefined
+Tree[5].chan4[2].buffer[1].dirty:Undefined
+Tree[5].chan4[2].buffer[2].opcode:Undefined
+Tree[5].chan4[2].buffer[2].para:Undefined
+Tree[5].chan4[2].buffer[2].addr:Undefined
+Tree[5].chan4[2].buffer[2].data:Undefined
+Tree[5].chan4[2].buffer[2].dirty:Undefined
+Tree[5].chan4[2].used:Undefined
+Tree[5].chan5[1].buffer[1].opcode:Undefined
+Tree[5].chan5[1].buffer[1].addr:Undefined
+Tree[5].chan5[1].buffer[1].data:Undefined
+Tree[5].chan5[1].buffer[1].dirty:Undefined
+Tree[5].chan5[1].buffer[2].opcode:Undefined
+Tree[5].chan5[1].buffer[2].addr:Undefined
+Tree[5].chan5[1].buffer[2].data:Undefined
+Tree[5].chan5[1].buffer[2].dirty:Undefined
+Tree[5].chan5[1].used:Undefined
+Tree[5].chan5[2].buffer[1].opcode:Undefined
+Tree[5].chan5[2].buffer[1].addr:Undefined
+Tree[5].chan5[2].buffer[1].data:Undefined
+Tree[5].chan5[2].buffer[1].dirty:Undefined
+Tree[5].chan5[2].buffer[2].opcode:Undefined
+Tree[5].chan5[2].buffer[2].addr:Undefined
+Tree[5].chan5[2].buffer[2].data:Undefined
+Tree[5].chan5[2].buffer[2].dirty:Undefined
+Tree[5].chan5[2].used:Undefined
+Tree[6].cache.used:0
+Tree[6].cache.line[1].addr:Undefined
+Tree[6].cache.line[1].state:Undefined
+Tree[6].cache.line[1].data:Undefined
+Tree[6].cache.line[1].dirty:Undefined
+Tree[6].cache.line[2].addr:Undefined
+Tree[6].cache.line[2].state:Undefined
+Tree[6].cache.line[2].data:Undefined
+Tree[6].cache.line[2].dirty:Undefined
+Tree[6].cache.valid[1]:0
+Tree[6].cache.valid[2]:0
+Tree[6].sons[1]:Undefined
+Tree[6].sons[2]:Undefined
+Tree[6].directory[1][1]:Undefined
+Tree[6].directory[1][2]:Undefined
+Tree[6].directory[2][1]:Undefined
+Tree[6].directory[2][2]:Undefined
+Tree[6].slave_pending[1][1]:Undefined
+Tree[6].slave_pending[1][2]:Undefined
+Tree[6].slave_pending[2][1]:Undefined
+Tree[6].slave_pending[2][2]:Undefined
+Tree[6].master_pending[1]:Undefined
+Tree[6].master_pending[2]:Undefined
+Tree[6].reqId:Undefined
+Tree[6].chan1[1].buffer[1].opcode:Undefined
+Tree[6].chan1[1].buffer[1].para:Undefined
+Tree[6].chan1[1].buffer[1].addr:Undefined
+Tree[6].chan1[1].buffer[1].data:Undefined
+Tree[6].chan1[1].buffer[1].dirty:Undefined
+Tree[6].chan1[1].buffer[2].opcode:Undefined
+Tree[6].chan1[1].buffer[2].para:Undefined
+Tree[6].chan1[1].buffer[2].addr:Undefined
+Tree[6].chan1[1].buffer[2].data:Undefined
+Tree[6].chan1[1].buffer[2].dirty:Undefined
+Tree[6].chan1[1].used:Undefined
+Tree[6].chan1[2].buffer[1].opcode:Undefined
+Tree[6].chan1[2].buffer[1].para:Undefined
+Tree[6].chan1[2].buffer[1].addr:Undefined
+Tree[6].chan1[2].buffer[1].data:Undefined
+Tree[6].chan1[2].buffer[1].dirty:Undefined
+Tree[6].chan1[2].buffer[2].opcode:Undefined
+Tree[6].chan1[2].buffer[2].para:Undefined
+Tree[6].chan1[2].buffer[2].addr:Undefined
+Tree[6].chan1[2].buffer[2].data:Undefined
+Tree[6].chan1[2].buffer[2].dirty:Undefined
+Tree[6].chan1[2].used:Undefined
+Tree[6].chan2[1].buffer[1].opcode:Undefined
+Tree[6].chan2[1].buffer[1].para:Undefined
+Tree[6].chan2[1].buffer[1].addr:Undefined
+Tree[6].chan2[1].buffer[1].data:Undefined
+Tree[6].chan2[1].buffer[1].dirty:Undefined
+Tree[6].chan2[1].buffer[2].opcode:Undefined
+Tree[6].chan2[1].buffer[2].para:Undefined
+Tree[6].chan2[1].buffer[2].addr:Undefined
+Tree[6].chan2[1].buffer[2].data:Undefined
+Tree[6].chan2[1].buffer[2].dirty:Undefined
+Tree[6].chan2[1].used:Undefined
+Tree[6].chan2[2].buffer[1].opcode:Undefined
+Tree[6].chan2[2].buffer[1].para:Undefined
+Tree[6].chan2[2].buffer[1].addr:Undefined
+Tree[6].chan2[2].buffer[1].data:Undefined
+Tree[6].chan2[2].buffer[1].dirty:Undefined
+Tree[6].chan2[2].buffer[2].opcode:Undefined
+Tree[6].chan2[2].buffer[2].para:Undefined
+Tree[6].chan2[2].buffer[2].addr:Undefined
+Tree[6].chan2[2].buffer[2].data:Undefined
+Tree[6].chan2[2].buffer[2].dirty:Undefined
+Tree[6].chan2[2].used:Undefined
+Tree[6].chan3[1].buffer[1].opcode:Undefined
+Tree[6].chan3[1].buffer[1].para:Undefined
+Tree[6].chan3[1].buffer[1].addr:Undefined
+Tree[6].chan3[1].buffer[1].data:Undefined
+Tree[6].chan3[1].buffer[1].dirty:Undefined
+Tree[6].chan3[1].buffer[2].opcode:Undefined
+Tree[6].chan3[1].buffer[2].para:Undefined
+Tree[6].chan3[1].buffer[2].addr:Undefined
+Tree[6].chan3[1].buffer[2].data:Undefined
+Tree[6].chan3[1].buffer[2].dirty:Undefined
+Tree[6].chan3[1].used:Undefined
+Tree[6].chan3[2].buffer[1].opcode:Undefined
+Tree[6].chan3[2].buffer[1].para:Undefined
+Tree[6].chan3[2].buffer[1].addr:Undefined
+Tree[6].chan3[2].buffer[1].data:Undefined
+Tree[6].chan3[2].buffer[1].dirty:Undefined
+Tree[6].chan3[2].buffer[2].opcode:Undefined
+Tree[6].chan3[2].buffer[2].para:Undefined
+Tree[6].chan3[2].buffer[2].addr:Undefined
+Tree[6].chan3[2].buffer[2].data:Undefined
+Tree[6].chan3[2].buffer[2].dirty:Undefined
+Tree[6].chan3[2].used:Undefined
+Tree[6].chan4[1].buffer[1].opcode:Undefined
+Tree[6].chan4[1].buffer[1].para:Undefined
+Tree[6].chan4[1].buffer[1].addr:Undefined
+Tree[6].chan4[1].buffer[1].data:Undefined
+Tree[6].chan4[1].buffer[1].dirty:Undefined
+Tree[6].chan4[1].buffer[2].opcode:Undefined
+Tree[6].chan4[1].buffer[2].para:Undefined
+Tree[6].chan4[1].buffer[2].addr:Undefined
+Tree[6].chan4[1].buffer[2].data:Undefined
+Tree[6].chan4[1].buffer[2].dirty:Undefined
+Tree[6].chan4[1].used:Undefined
+Tree[6].chan4[2].buffer[1].opcode:Undefined
+Tree[6].chan4[2].buffer[1].para:Undefined
+Tree[6].chan4[2].buffer[1].addr:Undefined
+Tree[6].chan4[2].buffer[1].data:Undefined
+Tree[6].chan4[2].buffer[1].dirty:Undefined
+Tree[6].chan4[2].buffer[2].opcode:Undefined
+Tree[6].chan4[2].buffer[2].para:Undefined
+Tree[6].chan4[2].buffer[2].addr:Undefined
+Tree[6].chan4[2].buffer[2].data:Undefined
+Tree[6].chan4[2].buffer[2].dirty:Undefined
+Tree[6].chan4[2].used:Undefined
+Tree[6].chan5[1].buffer[1].opcode:Undefined
+Tree[6].chan5[1].buffer[1].addr:Undefined
+Tree[6].chan5[1].buffer[1].data:Undefined
+Tree[6].chan5[1].buffer[1].dirty:Undefined
+Tree[6].chan5[1].buffer[2].opcode:Undefined
+Tree[6].chan5[1].buffer[2].addr:Undefined
+Tree[6].chan5[1].buffer[2].data:Undefined
+Tree[6].chan5[1].buffer[2].dirty:Undefined
+Tree[6].chan5[1].used:Undefined
+Tree[6].chan5[2].buffer[1].opcode:Undefined
+Tree[6].chan5[2].buffer[1].addr:Undefined
+Tree[6].chan5[2].buffer[1].data:Undefined
+Tree[6].chan5[2].buffer[1].dirty:Undefined
+Tree[6].chan5[2].buffer[2].opcode:Undefined
+Tree[6].chan5[2].buffer[2].addr:Undefined
+Tree[6].chan5[2].buffer[2].data:Undefined
+Tree[6].chan5[2].buffer[2].dirty:Undefined
+Tree[6].chan5[2].used:Undefined
+Tree[7].cache.used:0
+Tree[7].cache.line[1].addr:Undefined
+Tree[7].cache.line[1].state:Undefined
+Tree[7].cache.line[1].data:Undefined
+Tree[7].cache.line[1].dirty:Undefined
+Tree[7].cache.line[2].addr:Undefined
+Tree[7].cache.line[2].state:Undefined
+Tree[7].cache.line[2].data:Undefined
+Tree[7].cache.line[2].dirty:Undefined
+Tree[7].cache.valid[1]:0
+Tree[7].cache.valid[2]:0
+Tree[7].sons[1]:Undefined
+Tree[7].sons[2]:Undefined
+Tree[7].directory[1][1]:Undefined
+Tree[7].directory[1][2]:Undefined
+Tree[7].directory[2][1]:Undefined
+Tree[7].directory[2][2]:Undefined
+Tree[7].slave_pending[1][1]:Undefined
+Tree[7].slave_pending[1][2]:Undefined
+Tree[7].slave_pending[2][1]:Undefined
+Tree[7].slave_pending[2][2]:Undefined
+Tree[7].master_pending[1]:Undefined
+Tree[7].master_pending[2]:Undefined
+Tree[7].reqId:Undefined
+Tree[7].chan1[1].buffer[1].opcode:Undefined
+Tree[7].chan1[1].buffer[1].para:Undefined
+Tree[7].chan1[1].buffer[1].addr:Undefined
+Tree[7].chan1[1].buffer[1].data:Undefined
+Tree[7].chan1[1].buffer[1].dirty:Undefined
+Tree[7].chan1[1].buffer[2].opcode:Undefined
+Tree[7].chan1[1].buffer[2].para:Undefined
+Tree[7].chan1[1].buffer[2].addr:Undefined
+Tree[7].chan1[1].buffer[2].data:Undefined
+Tree[7].chan1[1].buffer[2].dirty:Undefined
+Tree[7].chan1[1].used:Undefined
+Tree[7].chan1[2].buffer[1].opcode:Undefined
+Tree[7].chan1[2].buffer[1].para:Undefined
+Tree[7].chan1[2].buffer[1].addr:Undefined
+Tree[7].chan1[2].buffer[1].data:Undefined
+Tree[7].chan1[2].buffer[1].dirty:Undefined
+Tree[7].chan1[2].buffer[2].opcode:Undefined
+Tree[7].chan1[2].buffer[2].para:Undefined
+Tree[7].chan1[2].buffer[2].addr:Undefined
+Tree[7].chan1[2].buffer[2].data:Undefined
+Tree[7].chan1[2].buffer[2].dirty:Undefined
+Tree[7].chan1[2].used:Undefined
+Tree[7].chan2[1].buffer[1].opcode:Undefined
+Tree[7].chan2[1].buffer[1].para:Undefined
+Tree[7].chan2[1].buffer[1].addr:Undefined
+Tree[7].chan2[1].buffer[1].data:Undefined
+Tree[7].chan2[1].buffer[1].dirty:Undefined
+Tree[7].chan2[1].buffer[2].opcode:Undefined
+Tree[7].chan2[1].buffer[2].para:Undefined
+Tree[7].chan2[1].buffer[2].addr:Undefined
+Tree[7].chan2[1].buffer[2].data:Undefined
+Tree[7].chan2[1].buffer[2].dirty:Undefined
+Tree[7].chan2[1].used:Undefined
+Tree[7].chan2[2].buffer[1].opcode:Undefined
+Tree[7].chan2[2].buffer[1].para:Undefined
+Tree[7].chan2[2].buffer[1].addr:Undefined
+Tree[7].chan2[2].buffer[1].data:Undefined
+Tree[7].chan2[2].buffer[1].dirty:Undefined
+Tree[7].chan2[2].buffer[2].opcode:Undefined
+Tree[7].chan2[2].buffer[2].para:Undefined
+Tree[7].chan2[2].buffer[2].addr:Undefined
+Tree[7].chan2[2].buffer[2].data:Undefined
+Tree[7].chan2[2].buffer[2].dirty:Undefined
+Tree[7].chan2[2].used:Undefined
+Tree[7].chan3[1].buffer[1].opcode:Undefined
+Tree[7].chan3[1].buffer[1].para:Undefined
+Tree[7].chan3[1].buffer[1].addr:Undefined
+Tree[7].chan3[1].buffer[1].data:Undefined
+Tree[7].chan3[1].buffer[1].dirty:Undefined
+Tree[7].chan3[1].buffer[2].opcode:Undefined
+Tree[7].chan3[1].buffer[2].para:Undefined
+Tree[7].chan3[1].buffer[2].addr:Undefined
+Tree[7].chan3[1].buffer[2].data:Undefined
+Tree[7].chan3[1].buffer[2].dirty:Undefined
+Tree[7].chan3[1].used:Undefined
+Tree[7].chan3[2].buffer[1].opcode:Undefined
+Tree[7].chan3[2].buffer[1].para:Undefined
+Tree[7].chan3[2].buffer[1].addr:Undefined
+Tree[7].chan3[2].buffer[1].data:Undefined
+Tree[7].chan3[2].buffer[1].dirty:Undefined
+Tree[7].chan3[2].buffer[2].opcode:Undefined
+Tree[7].chan3[2].buffer[2].para:Undefined
+Tree[7].chan3[2].buffer[2].addr:Undefined
+Tree[7].chan3[2].buffer[2].data:Undefined
+Tree[7].chan3[2].buffer[2].dirty:Undefined
+Tree[7].chan3[2].used:Undefined
+Tree[7].chan4[1].buffer[1].opcode:Undefined
+Tree[7].chan4[1].buffer[1].para:Undefined
+Tree[7].chan4[1].buffer[1].addr:Undefined
+Tree[7].chan4[1].buffer[1].data:Undefined
+Tree[7].chan4[1].buffer[1].dirty:Undefined
+Tree[7].chan4[1].buffer[2].opcode:Undefined
+Tree[7].chan4[1].buffer[2].para:Undefined
+Tree[7].chan4[1].buffer[2].addr:Undefined
+Tree[7].chan4[1].buffer[2].data:Undefined
+Tree[7].chan4[1].buffer[2].dirty:Undefined
+Tree[7].chan4[1].used:Undefined
+Tree[7].chan4[2].buffer[1].opcode:Undefined
+Tree[7].chan4[2].buffer[1].para:Undefined
+Tree[7].chan4[2].buffer[1].addr:Undefined
+Tree[7].chan4[2].buffer[1].data:Undefined
+Tree[7].chan4[2].buffer[1].dirty:Undefined
+Tree[7].chan4[2].buffer[2].opcode:Undefined
+Tree[7].chan4[2].buffer[2].para:Undefined
+Tree[7].chan4[2].buffer[2].addr:Undefined
+Tree[7].chan4[2].buffer[2].data:Undefined
+Tree[7].chan4[2].buffer[2].dirty:Undefined
+Tree[7].chan4[2].used:Undefined
+Tree[7].chan5[1].buffer[1].opcode:Undefined
+Tree[7].chan5[1].buffer[1].addr:Undefined
+Tree[7].chan5[1].buffer[1].data:Undefined
+Tree[7].chan5[1].buffer[1].dirty:Undefined
+Tree[7].chan5[1].buffer[2].opcode:Undefined
+Tree[7].chan5[1].buffer[2].addr:Undefined
+Tree[7].chan5[1].buffer[2].data:Undefined
+Tree[7].chan5[1].buffer[2].dirty:Undefined
+Tree[7].chan5[1].used:Undefined
+Tree[7].chan5[2].buffer[1].opcode:Undefined
+Tree[7].chan5[2].buffer[1].addr:Undefined
+Tree[7].chan5[2].buffer[1].data:Undefined
+Tree[7].chan5[2].buffer[1].dirty:Undefined
+Tree[7].chan5[2].buffer[2].opcode:Undefined
+Tree[7].chan5[2].buffer[2].addr:Undefined
+Tree[7].chan5[2].buffer[2].data:Undefined
+Tree[7].chan5[2].buffer[2].dirty:Undefined
+Tree[7].chan5[2].used:Undefined
+memData[1]:dataType_2
+memData[2]:dataType_2
+auxData[1]:dataType_2
+auxData[2]:dataType_2
+
+------------- Show a heuristic value: ------------------
+152
+
+------------- Show Initstate: ------------------
+Tree[1].cache.used:0
+Tree[1].cache.line[1].addr:Undefined
+Tree[1].cache.line[1].state:Undefined
+Tree[1].cache.line[1].data:Undefined
+Tree[1].cache.line[1].dirty:Undefined
+Tree[1].cache.line[2].addr:Undefined
+Tree[1].cache.line[2].state:Undefined
+Tree[1].cache.line[2].data:Undefined
+Tree[1].cache.line[2].dirty:Undefined
+Tree[1].cache.valid[1]:0
+Tree[1].cache.valid[2]:0
+Tree[1].sons[1]:2
+Tree[1].sons[2]:3
+Tree[1].directory[1][1]:None
+Tree[1].directory[1][2]:None
+Tree[1].directory[2][1]:None
+Tree[1].directory[2][2]:None
+Tree[1].slave_pending[1][1]:Undefined
+Tree[1].slave_pending[1][2]:Undefined
+Tree[1].slave_pending[2][1]:Undefined
+Tree[1].slave_pending[2][2]:Undefined
+Tree[1].master_pending[1]:Undefined
+Tree[1].master_pending[2]:Undefined
+Tree[1].reqId:Undefined
+Tree[1].chan1[1].buffer[1].opcode:Undefined
+Tree[1].chan1[1].buffer[1].para:Undefined
+Tree[1].chan1[1].buffer[1].addr:Undefined
+Tree[1].chan1[1].buffer[1].data:Undefined
+Tree[1].chan1[1].buffer[1].dirty:Undefined
+Tree[1].chan1[1].buffer[2].opcode:Undefined
+Tree[1].chan1[1].buffer[2].para:Undefined
+Tree[1].chan1[1].buffer[2].addr:Undefined
+Tree[1].chan1[1].buffer[2].data:Undefined
+Tree[1].chan1[1].buffer[2].dirty:Undefined
+Tree[1].chan1[1].used:0
+Tree[1].chan1[2].buffer[1].opcode:Undefined
+Tree[1].chan1[2].buffer[1].para:Undefined
+Tree[1].chan1[2].buffer[1].addr:Undefined
+Tree[1].chan1[2].buffer[1].data:Undefined
+Tree[1].chan1[2].buffer[1].dirty:Undefined
+Tree[1].chan1[2].buffer[2].opcode:Undefined
+Tree[1].chan1[2].buffer[2].para:Undefined
+Tree[1].chan1[2].buffer[2].addr:Undefined
+Tree[1].chan1[2].buffer[2].data:Undefined
+Tree[1].chan1[2].buffer[2].dirty:Undefined
+Tree[1].chan1[2].used:0
+Tree[1].chan2[1].buffer[1].opcode:Undefined
+Tree[1].chan2[1].buffer[1].para:Undefined
+Tree[1].chan2[1].buffer[1].addr:Undefined
+Tree[1].chan2[1].buffer[1].data:Undefined
+Tree[1].chan2[1].buffer[1].dirty:Undefined
+Tree[1].chan2[1].buffer[2].opcode:Undefined
+Tree[1].chan2[1].buffer[2].para:Undefined
+Tree[1].chan2[1].buffer[2].addr:Undefined
+Tree[1].chan2[1].buffer[2].data:Undefined
+Tree[1].chan2[1].buffer[2].dirty:Undefined
+Tree[1].chan2[1].used:0
+Tree[1].chan2[2].buffer[1].opcode:Undefined
+Tree[1].chan2[2].buffer[1].para:Undefined
+Tree[1].chan2[2].buffer[1].addr:Undefined
+Tree[1].chan2[2].buffer[1].data:Undefined
+Tree[1].chan2[2].buffer[1].dirty:Undefined
+Tree[1].chan2[2].buffer[2].opcode:Undefined
+Tree[1].chan2[2].buffer[2].para:Undefined
+Tree[1].chan2[2].buffer[2].addr:Undefined
+Tree[1].chan2[2].buffer[2].data:Undefined
+Tree[1].chan2[2].buffer[2].dirty:Undefined
+Tree[1].chan2[2].used:0
+Tree[1].chan3[1].buffer[1].opcode:Undefined
+Tree[1].chan3[1].buffer[1].para:Undefined
+Tree[1].chan3[1].buffer[1].addr:Undefined
+Tree[1].chan3[1].buffer[1].data:Undefined
+Tree[1].chan3[1].buffer[1].dirty:Undefined
+Tree[1].chan3[1].buffer[2].opcode:Undefined
+Tree[1].chan3[1].buffer[2].para:Undefined
+Tree[1].chan3[1].buffer[2].addr:Undefined
+Tree[1].chan3[1].buffer[2].data:Undefined
+Tree[1].chan3[1].buffer[2].dirty:Undefined
+Tree[1].chan3[1].used:0
+Tree[1].chan3[2].buffer[1].opcode:Undefined
+Tree[1].chan3[2].buffer[1].para:Undefined
+Tree[1].chan3[2].buffer[1].addr:Undefined
+Tree[1].chan3[2].buffer[1].data:Undefined
+Tree[1].chan3[2].buffer[1].dirty:Undefined
+Tree[1].chan3[2].buffer[2].opcode:Undefined
+Tree[1].chan3[2].buffer[2].para:Undefined
+Tree[1].chan3[2].buffer[2].addr:Undefined
+Tree[1].chan3[2].buffer[2].data:Undefined
+Tree[1].chan3[2].buffer[2].dirty:Undefined
+Tree[1].chan3[2].used:0
+Tree[1].chan4[1].buffer[1].opcode:Undefined
+Tree[1].chan4[1].buffer[1].para:Undefined
+Tree[1].chan4[1].buffer[1].addr:Undefined
+Tree[1].chan4[1].buffer[1].data:Undefined
+Tree[1].chan4[1].buffer[1].dirty:Undefined
+Tree[1].chan4[1].buffer[2].opcode:Undefined
+Tree[1].chan4[1].buffer[2].para:Undefined
+Tree[1].chan4[1].buffer[2].addr:Undefined
+Tree[1].chan4[1].buffer[2].data:Undefined
+Tree[1].chan4[1].buffer[2].dirty:Undefined
+Tree[1].chan4[1].used:0
+Tree[1].chan4[2].buffer[1].opcode:Undefined
+Tree[1].chan4[2].buffer[1].para:Undefined
+Tree[1].chan4[2].buffer[1].addr:Undefined
+Tree[1].chan4[2].buffer[1].data:Undefined
+Tree[1].chan4[2].buffer[1].dirty:Undefined
+Tree[1].chan4[2].buffer[2].opcode:Undefined
+Tree[1].chan4[2].buffer[2].para:Undefined
+Tree[1].chan4[2].buffer[2].addr:Undefined
+Tree[1].chan4[2].buffer[2].data:Undefined
+Tree[1].chan4[2].buffer[2].dirty:Undefined
+Tree[1].chan4[2].used:0
+Tree[1].chan5[1].buffer[1].opcode:Undefined
+Tree[1].chan5[1].buffer[1].addr:Undefined
+Tree[1].chan5[1].buffer[1].data:Undefined
+Tree[1].chan5[1].buffer[1].dirty:Undefined
+Tree[1].chan5[1].buffer[2].opcode:Undefined
+Tree[1].chan5[1].buffer[2].addr:Undefined
+Tree[1].chan5[1].buffer[2].data:Undefined
+Tree[1].chan5[1].buffer[2].dirty:Undefined
+Tree[1].chan5[1].used:0
+Tree[1].chan5[2].buffer[1].opcode:Undefined
+Tree[1].chan5[2].buffer[1].addr:Undefined
+Tree[1].chan5[2].buffer[1].data:Undefined
+Tree[1].chan5[2].buffer[1].dirty:Undefined
+Tree[1].chan5[2].buffer[2].opcode:Undefined
+Tree[1].chan5[2].buffer[2].addr:Undefined
+Tree[1].chan5[2].buffer[2].data:Undefined
+Tree[1].chan5[2].buffer[2].dirty:Undefined
+Tree[1].chan5[2].used:0
+Tree[2].cache.used:0
+Tree[2].cache.line[1].addr:Undefined
+Tree[2].cache.line[1].state:Undefined
+Tree[2].cache.line[1].data:Undefined
+Tree[2].cache.line[1].dirty:Undefined
+Tree[2].cache.line[2].addr:Undefined
+Tree[2].cache.line[2].state:Undefined
+Tree[2].cache.line[2].data:Undefined
+Tree[2].cache.line[2].dirty:Undefined
+Tree[2].cache.valid[1]:0
+Tree[2].cache.valid[2]:0
+Tree[2].sons[1]:4
+Tree[2].sons[2]:5
+Tree[2].directory[1][1]:None
+Tree[2].directory[1][2]:None
+Tree[2].directory[2][1]:None
+Tree[2].directory[2][2]:None
+Tree[2].slave_pending[1][1]:Undefined
+Tree[2].slave_pending[1][2]:Undefined
+Tree[2].slave_pending[2][1]:Undefined
+Tree[2].slave_pending[2][2]:Undefined
+Tree[2].master_pending[1]:Undefined
+Tree[2].master_pending[2]:Undefined
+Tree[2].reqId:Undefined
+Tree[2].chan1[1].buffer[1].opcode:Undefined
+Tree[2].chan1[1].buffer[1].para:Undefined
+Tree[2].chan1[1].buffer[1].addr:Undefined
+Tree[2].chan1[1].buffer[1].data:Undefined
+Tree[2].chan1[1].buffer[1].dirty:Undefined
+Tree[2].chan1[1].buffer[2].opcode:Undefined
+Tree[2].chan1[1].buffer[2].para:Undefined
+Tree[2].chan1[1].buffer[2].addr:Undefined
+Tree[2].chan1[1].buffer[2].data:Undefined
+Tree[2].chan1[1].buffer[2].dirty:Undefined
+Tree[2].chan1[1].used:0
+Tree[2].chan1[2].buffer[1].opcode:Undefined
+Tree[2].chan1[2].buffer[1].para:Undefined
+Tree[2].chan1[2].buffer[1].addr:Undefined
+Tree[2].chan1[2].buffer[1].data:Undefined
+Tree[2].chan1[2].buffer[1].dirty:Undefined
+Tree[2].chan1[2].buffer[2].opcode:Undefined
+Tree[2].chan1[2].buffer[2].para:Undefined
+Tree[2].chan1[2].buffer[2].addr:Undefined
+Tree[2].chan1[2].buffer[2].data:Undefined
+Tree[2].chan1[2].buffer[2].dirty:Undefined
+Tree[2].chan1[2].used:0
+Tree[2].chan2[1].buffer[1].opcode:Undefined
+Tree[2].chan2[1].buffer[1].para:Undefined
+Tree[2].chan2[1].buffer[1].addr:Undefined
+Tree[2].chan2[1].buffer[1].data:Undefined
+Tree[2].chan2[1].buffer[1].dirty:Undefined
+Tree[2].chan2[1].buffer[2].opcode:Undefined
+Tree[2].chan2[1].buffer[2].para:Undefined
+Tree[2].chan2[1].buffer[2].addr:Undefined
+Tree[2].chan2[1].buffer[2].data:Undefined
+Tree[2].chan2[1].buffer[2].dirty:Undefined
+Tree[2].chan2[1].used:0
+Tree[2].chan2[2].buffer[1].opcode:Undefined
+Tree[2].chan2[2].buffer[1].para:Undefined
+Tree[2].chan2[2].buffer[1].addr:Undefined
+Tree[2].chan2[2].buffer[1].data:Undefined
+Tree[2].chan2[2].buffer[1].dirty:Undefined
+Tree[2].chan2[2].buffer[2].opcode:Undefined
+Tree[2].chan2[2].buffer[2].para:Undefined
+Tree[2].chan2[2].buffer[2].addr:Undefined
+Tree[2].chan2[2].buffer[2].data:Undefined
+Tree[2].chan2[2].buffer[2].dirty:Undefined
+Tree[2].chan2[2].used:0
+Tree[2].chan3[1].buffer[1].opcode:Undefined
+Tree[2].chan3[1].buffer[1].para:Undefined
+Tree[2].chan3[1].buffer[1].addr:Undefined
+Tree[2].chan3[1].buffer[1].data:Undefined
+Tree[2].chan3[1].buffer[1].dirty:Undefined
+Tree[2].chan3[1].buffer[2].opcode:Undefined
+Tree[2].chan3[1].buffer[2].para:Undefined
+Tree[2].chan3[1].buffer[2].addr:Undefined
+Tree[2].chan3[1].buffer[2].data:Undefined
+Tree[2].chan3[1].buffer[2].dirty:Undefined
+Tree[2].chan3[1].used:0
+Tree[2].chan3[2].buffer[1].opcode:Undefined
+Tree[2].chan3[2].buffer[1].para:Undefined
+Tree[2].chan3[2].buffer[1].addr:Undefined
+Tree[2].chan3[2].buffer[1].data:Undefined
+Tree[2].chan3[2].buffer[1].dirty:Undefined
+Tree[2].chan3[2].buffer[2].opcode:Undefined
+Tree[2].chan3[2].buffer[2].para:Undefined
+Tree[2].chan3[2].buffer[2].addr:Undefined
+Tree[2].chan3[2].buffer[2].data:Undefined
+Tree[2].chan3[2].buffer[2].dirty:Undefined
+Tree[2].chan3[2].used:0
+Tree[2].chan4[1].buffer[1].opcode:Undefined
+Tree[2].chan4[1].buffer[1].para:Undefined
+Tree[2].chan4[1].buffer[1].addr:Undefined
+Tree[2].chan4[1].buffer[1].data:Undefined
+Tree[2].chan4[1].buffer[1].dirty:Undefined
+Tree[2].chan4[1].buffer[2].opcode:Undefined
+Tree[2].chan4[1].buffer[2].para:Undefined
+Tree[2].chan4[1].buffer[2].addr:Undefined
+Tree[2].chan4[1].buffer[2].data:Undefined
+Tree[2].chan4[1].buffer[2].dirty:Undefined
+Tree[2].chan4[1].used:0
+Tree[2].chan4[2].buffer[1].opcode:Undefined
+Tree[2].chan4[2].buffer[1].para:Undefined
+Tree[2].chan4[2].buffer[1].addr:Undefined
+Tree[2].chan4[2].buffer[1].data:Undefined
+Tree[2].chan4[2].buffer[1].dirty:Undefined
+Tree[2].chan4[2].buffer[2].opcode:Undefined
+Tree[2].chan4[2].buffer[2].para:Undefined
+Tree[2].chan4[2].buffer[2].addr:Undefined
+Tree[2].chan4[2].buffer[2].data:Undefined
+Tree[2].chan4[2].buffer[2].dirty:Undefined
+Tree[2].chan4[2].used:0
+Tree[2].chan5[1].buffer[1].opcode:Undefined
+Tree[2].chan5[1].buffer[1].addr:Undefined
+Tree[2].chan5[1].buffer[1].data:Undefined
+Tree[2].chan5[1].buffer[1].dirty:Undefined
+Tree[2].chan5[1].buffer[2].opcode:Undefined
+Tree[2].chan5[1].buffer[2].addr:Undefined
+Tree[2].chan5[1].buffer[2].data:Undefined
+Tree[2].chan5[1].buffer[2].dirty:Undefined
+Tree[2].chan5[1].used:0
+Tree[2].chan5[2].buffer[1].opcode:Undefined
+Tree[2].chan5[2].buffer[1].addr:Undefined
+Tree[2].chan5[2].buffer[1].data:Undefined
+Tree[2].chan5[2].buffer[1].dirty:Undefined
+Tree[2].chan5[2].buffer[2].opcode:Undefined
+Tree[2].chan5[2].buffer[2].addr:Undefined
+Tree[2].chan5[2].buffer[2].data:Undefined
+Tree[2].chan5[2].buffer[2].dirty:Undefined
+Tree[2].chan5[2].used:0
+Tree[3].cache.used:0
+Tree[3].cache.line[1].addr:Undefined
+Tree[3].cache.line[1].state:Undefined
+Tree[3].cache.line[1].data:Undefined
+Tree[3].cache.line[1].dirty:Undefined
+Tree[3].cache.line[2].addr:Undefined
+Tree[3].cache.line[2].state:Undefined
+Tree[3].cache.line[2].data:Undefined
+Tree[3].cache.line[2].dirty:Undefined
+Tree[3].cache.valid[1]:0
+Tree[3].cache.valid[2]:0
+Tree[3].sons[1]:6
+Tree[3].sons[2]:7
+Tree[3].directory[1][1]:None
+Tree[3].directory[1][2]:None
+Tree[3].directory[2][1]:None
+Tree[3].directory[2][2]:None
+Tree[3].slave_pending[1][1]:Undefined
+Tree[3].slave_pending[1][2]:Undefined
+Tree[3].slave_pending[2][1]:Undefined
+Tree[3].slave_pending[2][2]:Undefined
+Tree[3].master_pending[1]:Undefined
+Tree[3].master_pending[2]:Undefined
+Tree[3].reqId:Undefined
+Tree[3].chan1[1].buffer[1].opcode:Undefined
+Tree[3].chan1[1].buffer[1].para:Undefined
+Tree[3].chan1[1].buffer[1].addr:Undefined
+Tree[3].chan1[1].buffer[1].data:Undefined
+Tree[3].chan1[1].buffer[1].dirty:Undefined
+Tree[3].chan1[1].buffer[2].opcode:Undefined
+Tree[3].chan1[1].buffer[2].para:Undefined
+Tree[3].chan1[1].buffer[2].addr:Undefined
+Tree[3].chan1[1].buffer[2].data:Undefined
+Tree[3].chan1[1].buffer[2].dirty:Undefined
+Tree[3].chan1[1].used:0
+Tree[3].chan1[2].buffer[1].opcode:Undefined
+Tree[3].chan1[2].buffer[1].para:Undefined
+Tree[3].chan1[2].buffer[1].addr:Undefined
+Tree[3].chan1[2].buffer[1].data:Undefined
+Tree[3].chan1[2].buffer[1].dirty:Undefined
+Tree[3].chan1[2].buffer[2].opcode:Undefined
+Tree[3].chan1[2].buffer[2].para:Undefined
+Tree[3].chan1[2].buffer[2].addr:Undefined
+Tree[3].chan1[2].buffer[2].data:Undefined
+Tree[3].chan1[2].buffer[2].dirty:Undefined
+Tree[3].chan1[2].used:0
+Tree[3].chan2[1].buffer[1].opcode:Undefined
+Tree[3].chan2[1].buffer[1].para:Undefined
+Tree[3].chan2[1].buffer[1].addr:Undefined
+Tree[3].chan2[1].buffer[1].data:Undefined
+Tree[3].chan2[1].buffer[1].dirty:Undefined
+Tree[3].chan2[1].buffer[2].opcode:Undefined
+Tree[3].chan2[1].buffer[2].para:Undefined
+Tree[3].chan2[1].buffer[2].addr:Undefined
+Tree[3].chan2[1].buffer[2].data:Undefined
+Tree[3].chan2[1].buffer[2].dirty:Undefined
+Tree[3].chan2[1].used:0
+Tree[3].chan2[2].buffer[1].opcode:Undefined
+Tree[3].chan2[2].buffer[1].para:Undefined
+Tree[3].chan2[2].buffer[1].addr:Undefined
+Tree[3].chan2[2].buffer[1].data:Undefined
+Tree[3].chan2[2].buffer[1].dirty:Undefined
+Tree[3].chan2[2].buffer[2].opcode:Undefined
+Tree[3].chan2[2].buffer[2].para:Undefined
+Tree[3].chan2[2].buffer[2].addr:Undefined
+Tree[3].chan2[2].buffer[2].data:Undefined
+Tree[3].chan2[2].buffer[2].dirty:Undefined
+Tree[3].chan2[2].used:0
+Tree[3].chan3[1].buffer[1].opcode:Undefined
+Tree[3].chan3[1].buffer[1].para:Undefined
+Tree[3].chan3[1].buffer[1].addr:Undefined
+Tree[3].chan3[1].buffer[1].data:Undefined
+Tree[3].chan3[1].buffer[1].dirty:Undefined
+Tree[3].chan3[1].buffer[2].opcode:Undefined
+Tree[3].chan3[1].buffer[2].para:Undefined
+Tree[3].chan3[1].buffer[2].addr:Undefined
+Tree[3].chan3[1].buffer[2].data:Undefined
+Tree[3].chan3[1].buffer[2].dirty:Undefined
+Tree[3].chan3[1].used:0
+Tree[3].chan3[2].buffer[1].opcode:Undefined
+Tree[3].chan3[2].buffer[1].para:Undefined
+Tree[3].chan3[2].buffer[1].addr:Undefined
+Tree[3].chan3[2].buffer[1].data:Undefined
+Tree[3].chan3[2].buffer[1].dirty:Undefined
+Tree[3].chan3[2].buffer[2].opcode:Undefined
+Tree[3].chan3[2].buffer[2].para:Undefined
+Tree[3].chan3[2].buffer[2].addr:Undefined
+Tree[3].chan3[2].buffer[2].data:Undefined
+Tree[3].chan3[2].buffer[2].dirty:Undefined
+Tree[3].chan3[2].used:0
+Tree[3].chan4[1].buffer[1].opcode:Undefined
+Tree[3].chan4[1].buffer[1].para:Undefined
+Tree[3].chan4[1].buffer[1].addr:Undefined
+Tree[3].chan4[1].buffer[1].data:Undefined
+Tree[3].chan4[1].buffer[1].dirty:Undefined
+Tree[3].chan4[1].buffer[2].opcode:Undefined
+Tree[3].chan4[1].buffer[2].para:Undefined
+Tree[3].chan4[1].buffer[2].addr:Undefined
+Tree[3].chan4[1].buffer[2].data:Undefined
+Tree[3].chan4[1].buffer[2].dirty:Undefined
+Tree[3].chan4[1].used:0
+Tree[3].chan4[2].buffer[1].opcode:Undefined
+Tree[3].chan4[2].buffer[1].para:Undefined
+Tree[3].chan4[2].buffer[1].addr:Undefined
+Tree[3].chan4[2].buffer[1].data:Undefined
+Tree[3].chan4[2].buffer[1].dirty:Undefined
+Tree[3].chan4[2].buffer[2].opcode:Undefined
+Tree[3].chan4[2].buffer[2].para:Undefined
+Tree[3].chan4[2].buffer[2].addr:Undefined
+Tree[3].chan4[2].buffer[2].data:Undefined
+Tree[3].chan4[2].buffer[2].dirty:Undefined
+Tree[3].chan4[2].used:0
+Tree[3].chan5[1].buffer[1].opcode:Undefined
+Tree[3].chan5[1].buffer[1].addr:Undefined
+Tree[3].chan5[1].buffer[1].data:Undefined
+Tree[3].chan5[1].buffer[1].dirty:Undefined
+Tree[3].chan5[1].buffer[2].opcode:Undefined
+Tree[3].chan5[1].buffer[2].addr:Undefined
+Tree[3].chan5[1].buffer[2].data:Undefined
+Tree[3].chan5[1].buffer[2].dirty:Undefined
+Tree[3].chan5[1].used:0
+Tree[3].chan5[2].buffer[1].opcode:Undefined
+Tree[3].chan5[2].buffer[1].addr:Undefined
+Tree[3].chan5[2].buffer[1].data:Undefined
+Tree[3].chan5[2].buffer[1].dirty:Undefined
+Tree[3].chan5[2].buffer[2].opcode:Undefined
+Tree[3].chan5[2].buffer[2].addr:Undefined
+Tree[3].chan5[2].buffer[2].data:Undefined
+Tree[3].chan5[2].buffer[2].dirty:Undefined
+Tree[3].chan5[2].used:0
+Tree[4].cache.used:0
+Tree[4].cache.line[1].addr:Undefined
+Tree[4].cache.line[1].state:Undefined
+Tree[4].cache.line[1].data:Undefined
+Tree[4].cache.line[1].dirty:Undefined
+Tree[4].cache.line[2].addr:Undefined
+Tree[4].cache.line[2].state:Undefined
+Tree[4].cache.line[2].data:Undefined
+Tree[4].cache.line[2].dirty:Undefined
+Tree[4].cache.valid[1]:0
+Tree[4].cache.valid[2]:0
+Tree[4].sons[1]:Undefined
+Tree[4].sons[2]:Undefined
+Tree[4].directory[1][1]:Undefined
+Tree[4].directory[1][2]:Undefined
+Tree[4].directory[2][1]:Undefined
+Tree[4].directory[2][2]:Undefined
+Tree[4].slave_pending[1][1]:Undefined
+Tree[4].slave_pending[1][2]:Undefined
+Tree[4].slave_pending[2][1]:Undefined
+Tree[4].slave_pending[2][2]:Undefined
+Tree[4].master_pending[1]:Undefined
+Tree[4].master_pending[2]:Undefined
+Tree[4].reqId:Undefined
+Tree[4].chan1[1].buffer[1].opcode:Undefined
+Tree[4].chan1[1].buffer[1].para:Undefined
+Tree[4].chan1[1].buffer[1].addr:Undefined
+Tree[4].chan1[1].buffer[1].data:Undefined
+Tree[4].chan1[1].buffer[1].dirty:Undefined
+Tree[4].chan1[1].buffer[2].opcode:Undefined
+Tree[4].chan1[1].buffer[2].para:Undefined
+Tree[4].chan1[1].buffer[2].addr:Undefined
+Tree[4].chan1[1].buffer[2].data:Undefined
+Tree[4].chan1[1].buffer[2].dirty:Undefined
+Tree[4].chan1[1].used:Undefined
+Tree[4].chan1[2].buffer[1].opcode:Undefined
+Tree[4].chan1[2].buffer[1].para:Undefined
+Tree[4].chan1[2].buffer[1].addr:Undefined
+Tree[4].chan1[2].buffer[1].data:Undefined
+Tree[4].chan1[2].buffer[1].dirty:Undefined
+Tree[4].chan1[2].buffer[2].opcode:Undefined
+Tree[4].chan1[2].buffer[2].para:Undefined
+Tree[4].chan1[2].buffer[2].addr:Undefined
+Tree[4].chan1[2].buffer[2].data:Undefined
+Tree[4].chan1[2].buffer[2].dirty:Undefined
+Tree[4].chan1[2].used:Undefined
+Tree[4].chan2[1].buffer[1].opcode:Undefined
+Tree[4].chan2[1].buffer[1].para:Undefined
+Tree[4].chan2[1].buffer[1].addr:Undefined
+Tree[4].chan2[1].buffer[1].data:Undefined
+Tree[4].chan2[1].buffer[1].dirty:Undefined
+Tree[4].chan2[1].buffer[2].opcode:Undefined
+Tree[4].chan2[1].buffer[2].para:Undefined
+Tree[4].chan2[1].buffer[2].addr:Undefined
+Tree[4].chan2[1].buffer[2].data:Undefined
+Tree[4].chan2[1].buffer[2].dirty:Undefined
+Tree[4].chan2[1].used:Undefined
+Tree[4].chan2[2].buffer[1].opcode:Undefined
+Tree[4].chan2[2].buffer[1].para:Undefined
+Tree[4].chan2[2].buffer[1].addr:Undefined
+Tree[4].chan2[2].buffer[1].data:Undefined
+Tree[4].chan2[2].buffer[1].dirty:Undefined
+Tree[4].chan2[2].buffer[2].opcode:Undefined
+Tree[4].chan2[2].buffer[2].para:Undefined
+Tree[4].chan2[2].buffer[2].addr:Undefined
+Tree[4].chan2[2].buffer[2].data:Undefined
+Tree[4].chan2[2].buffer[2].dirty:Undefined
+Tree[4].chan2[2].used:Undefined
+Tree[4].chan3[1].buffer[1].opcode:Undefined
+Tree[4].chan3[1].buffer[1].para:Undefined
+Tree[4].chan3[1].buffer[1].addr:Undefined
+Tree[4].chan3[1].buffer[1].data:Undefined
+Tree[4].chan3[1].buffer[1].dirty:Undefined
+Tree[4].chan3[1].buffer[2].opcode:Undefined
+Tree[4].chan3[1].buffer[2].para:Undefined
+Tree[4].chan3[1].buffer[2].addr:Undefined
+Tree[4].chan3[1].buffer[2].data:Undefined
+Tree[4].chan3[1].buffer[2].dirty:Undefined
+Tree[4].chan3[1].used:Undefined
+Tree[4].chan3[2].buffer[1].opcode:Undefined
+Tree[4].chan3[2].buffer[1].para:Undefined
+Tree[4].chan3[2].buffer[1].addr:Undefined
+Tree[4].chan3[2].buffer[1].data:Undefined
+Tree[4].chan3[2].buffer[1].dirty:Undefined
+Tree[4].chan3[2].buffer[2].opcode:Undefined
+Tree[4].chan3[2].buffer[2].para:Undefined
+Tree[4].chan3[2].buffer[2].addr:Undefined
+Tree[4].chan3[2].buffer[2].data:Undefined
+Tree[4].chan3[2].buffer[2].dirty:Undefined
+Tree[4].chan3[2].used:Undefined
+Tree[4].chan4[1].buffer[1].opcode:Undefined
+Tree[4].chan4[1].buffer[1].para:Undefined
+Tree[4].chan4[1].buffer[1].addr:Undefined
+Tree[4].chan4[1].buffer[1].data:Undefined
+Tree[4].chan4[1].buffer[1].dirty:Undefined
+Tree[4].chan4[1].buffer[2].opcode:Undefined
+Tree[4].chan4[1].buffer[2].para:Undefined
+Tree[4].chan4[1].buffer[2].addr:Undefined
+Tree[4].chan4[1].buffer[2].data:Undefined
+Tree[4].chan4[1].buffer[2].dirty:Undefined
+Tree[4].chan4[1].used:Undefined
+Tree[4].chan4[2].buffer[1].opcode:Undefined
+Tree[4].chan4[2].buffer[1].para:Undefined
+Tree[4].chan4[2].buffer[1].addr:Undefined
+Tree[4].chan4[2].buffer[1].data:Undefined
+Tree[4].chan4[2].buffer[1].dirty:Undefined
+Tree[4].chan4[2].buffer[2].opcode:Undefined
+Tree[4].chan4[2].buffer[2].para:Undefined
+Tree[4].chan4[2].buffer[2].addr:Undefined
+Tree[4].chan4[2].buffer[2].data:Undefined
+Tree[4].chan4[2].buffer[2].dirty:Undefined
+Tree[4].chan4[2].used:Undefined
+Tree[4].chan5[1].buffer[1].opcode:Undefined
+Tree[4].chan5[1].buffer[1].addr:Undefined
+Tree[4].chan5[1].buffer[1].data:Undefined
+Tree[4].chan5[1].buffer[1].dirty:Undefined
+Tree[4].chan5[1].buffer[2].opcode:Undefined
+Tree[4].chan5[1].buffer[2].addr:Undefined
+Tree[4].chan5[1].buffer[2].data:Undefined
+Tree[4].chan5[1].buffer[2].dirty:Undefined
+Tree[4].chan5[1].used:Undefined
+Tree[4].chan5[2].buffer[1].opcode:Undefined
+Tree[4].chan5[2].buffer[1].addr:Undefined
+Tree[4].chan5[2].buffer[1].data:Undefined
+Tree[4].chan5[2].buffer[1].dirty:Undefined
+Tree[4].chan5[2].buffer[2].opcode:Undefined
+Tree[4].chan5[2].buffer[2].addr:Undefined
+Tree[4].chan5[2].buffer[2].data:Undefined
+Tree[4].chan5[2].buffer[2].dirty:Undefined
+Tree[4].chan5[2].used:Undefined
+Tree[5].cache.used:0
+Tree[5].cache.line[1].addr:Undefined
+Tree[5].cache.line[1].state:Undefined
+Tree[5].cache.line[1].data:Undefined
+Tree[5].cache.line[1].dirty:Undefined
+Tree[5].cache.line[2].addr:Undefined
+Tree[5].cache.line[2].state:Undefined
+Tree[5].cache.line[2].data:Undefined
+Tree[5].cache.line[2].dirty:Undefined
+Tree[5].cache.valid[1]:0
+Tree[5].cache.valid[2]:0
+Tree[5].sons[1]:Undefined
+Tree[5].sons[2]:Undefined
+Tree[5].directory[1][1]:Undefined
+Tree[5].directory[1][2]:Undefined
+Tree[5].directory[2][1]:Undefined
+Tree[5].directory[2][2]:Undefined
+Tree[5].slave_pending[1][1]:Undefined
+Tree[5].slave_pending[1][2]:Undefined
+Tree[5].slave_pending[2][1]:Undefined
+Tree[5].slave_pending[2][2]:Undefined
+Tree[5].master_pending[1]:Undefined
+Tree[5].master_pending[2]:Undefined
+Tree[5].reqId:Undefined
+Tree[5].chan1[1].buffer[1].opcode:Undefined
+Tree[5].chan1[1].buffer[1].para:Undefined
+Tree[5].chan1[1].buffer[1].addr:Undefined
+Tree[5].chan1[1].buffer[1].data:Undefined
+Tree[5].chan1[1].buffer[1].dirty:Undefined
+Tree[5].chan1[1].buffer[2].opcode:Undefined
+Tree[5].chan1[1].buffer[2].para:Undefined
+Tree[5].chan1[1].buffer[2].addr:Undefined
+Tree[5].chan1[1].buffer[2].data:Undefined
+Tree[5].chan1[1].buffer[2].dirty:Undefined
+Tree[5].chan1[1].used:Undefined
+Tree[5].chan1[2].buffer[1].opcode:Undefined
+Tree[5].chan1[2].buffer[1].para:Undefined
+Tree[5].chan1[2].buffer[1].addr:Undefined
+Tree[5].chan1[2].buffer[1].data:Undefined
+Tree[5].chan1[2].buffer[1].dirty:Undefined
+Tree[5].chan1[2].buffer[2].opcode:Undefined
+Tree[5].chan1[2].buffer[2].para:Undefined
+Tree[5].chan1[2].buffer[2].addr:Undefined
+Tree[5].chan1[2].buffer[2].data:Undefined
+Tree[5].chan1[2].buffer[2].dirty:Undefined
+Tree[5].chan1[2].used:Undefined
+Tree[5].chan2[1].buffer[1].opcode:Undefined
+Tree[5].chan2[1].buffer[1].para:Undefined
+Tree[5].chan2[1].buffer[1].addr:Undefined
+Tree[5].chan2[1].buffer[1].data:Undefined
+Tree[5].chan2[1].buffer[1].dirty:Undefined
+Tree[5].chan2[1].buffer[2].opcode:Undefined
+Tree[5].chan2[1].buffer[2].para:Undefined
+Tree[5].chan2[1].buffer[2].addr:Undefined
+Tree[5].chan2[1].buffer[2].data:Undefined
+Tree[5].chan2[1].buffer[2].dirty:Undefined
+Tree[5].chan2[1].used:Undefined
+Tree[5].chan2[2].buffer[1].opcode:Undefined
+Tree[5].chan2[2].buffer[1].para:Undefined
+Tree[5].chan2[2].buffer[1].addr:Undefined
+Tree[5].chan2[2].buffer[1].data:Undefined
+Tree[5].chan2[2].buffer[1].dirty:Undefined
+Tree[5].chan2[2].buffer[2].opcode:Undefined
+Tree[5].chan2[2].buffer[2].para:Undefined
+Tree[5].chan2[2].buffer[2].addr:Undefined
+Tree[5].chan2[2].buffer[2].data:Undefined
+Tree[5].chan2[2].buffer[2].dirty:Undefined
+Tree[5].chan2[2].used:Undefined
+Tree[5].chan3[1].buffer[1].opcode:Undefined
+Tree[5].chan3[1].buffer[1].para:Undefined
+Tree[5].chan3[1].buffer[1].addr:Undefined
+Tree[5].chan3[1].buffer[1].data:Undefined
+Tree[5].chan3[1].buffer[1].dirty:Undefined
+Tree[5].chan3[1].buffer[2].opcode:Undefined
+Tree[5].chan3[1].buffer[2].para:Undefined
+Tree[5].chan3[1].buffer[2].addr:Undefined
+Tree[5].chan3[1].buffer[2].data:Undefined
+Tree[5].chan3[1].buffer[2].dirty:Undefined
+Tree[5].chan3[1].used:Undefined
+Tree[5].chan3[2].buffer[1].opcode:Undefined
+Tree[5].chan3[2].buffer[1].para:Undefined
+Tree[5].chan3[2].buffer[1].addr:Undefined
+Tree[5].chan3[2].buffer[1].data:Undefined
+Tree[5].chan3[2].buffer[1].dirty:Undefined
+Tree[5].chan3[2].buffer[2].opcode:Undefined
+Tree[5].chan3[2].buffer[2].para:Undefined
+Tree[5].chan3[2].buffer[2].addr:Undefined
+Tree[5].chan3[2].buffer[2].data:Undefined
+Tree[5].chan3[2].buffer[2].dirty:Undefined
+Tree[5].chan3[2].used:Undefined
+Tree[5].chan4[1].buffer[1].opcode:Undefined
+Tree[5].chan4[1].buffer[1].para:Undefined
+Tree[5].chan4[1].buffer[1].addr:Undefined
+Tree[5].chan4[1].buffer[1].data:Undefined
+Tree[5].chan4[1].buffer[1].dirty:Undefined
+Tree[5].chan4[1].buffer[2].opcode:Undefined
+Tree[5].chan4[1].buffer[2].para:Undefined
+Tree[5].chan4[1].buffer[2].addr:Undefined
+Tree[5].chan4[1].buffer[2].data:Undefined
+Tree[5].chan4[1].buffer[2].dirty:Undefined
+Tree[5].chan4[1].used:Undefined
+Tree[5].chan4[2].buffer[1].opcode:Undefined
+Tree[5].chan4[2].buffer[1].para:Undefined
+Tree[5].chan4[2].buffer[1].addr:Undefined
+Tree[5].chan4[2].buffer[1].data:Undefined
+Tree[5].chan4[2].buffer[1].dirty:Undefined
+Tree[5].chan4[2].buffer[2].opcode:Undefined
+Tree[5].chan4[2].buffer[2].para:Undefined
+Tree[5].chan4[2].buffer[2].addr:Undefined
+Tree[5].chan4[2].buffer[2].data:Undefined
+Tree[5].chan4[2].buffer[2].dirty:Undefined
+Tree[5].chan4[2].used:Undefined
+Tree[5].chan5[1].buffer[1].opcode:Undefined
+Tree[5].chan5[1].buffer[1].addr:Undefined
+Tree[5].chan5[1].buffer[1].data:Undefined
+Tree[5].chan5[1].buffer[1].dirty:Undefined
+Tree[5].chan5[1].buffer[2].opcode:Undefined
+Tree[5].chan5[1].buffer[2].addr:Undefined
+Tree[5].chan5[1].buffer[2].data:Undefined
+Tree[5].chan5[1].buffer[2].dirty:Undefined
+Tree[5].chan5[1].used:Undefined
+Tree[5].chan5[2].buffer[1].opcode:Undefined
+Tree[5].chan5[2].buffer[1].addr:Undefined
+Tree[5].chan5[2].buffer[1].data:Undefined
+Tree[5].chan5[2].buffer[1].dirty:Undefined
+Tree[5].chan5[2].buffer[2].opcode:Undefined
+Tree[5].chan5[2].buffer[2].addr:Undefined
+Tree[5].chan5[2].buffer[2].data:Undefined
+Tree[5].chan5[2].buffer[2].dirty:Undefined
+Tree[5].chan5[2].used:Undefined
+Tree[6].cache.used:0
+Tree[6].cache.line[1].addr:Undefined
+Tree[6].cache.line[1].state:Undefined
+Tree[6].cache.line[1].data:Undefined
+Tree[6].cache.line[1].dirty:Undefined
+Tree[6].cache.line[2].addr:Undefined
+Tree[6].cache.line[2].state:Undefined
+Tree[6].cache.line[2].data:Undefined
+Tree[6].cache.line[2].dirty:Undefined
+Tree[6].cache.valid[1]:0
+Tree[6].cache.valid[2]:0
+Tree[6].sons[1]:Undefined
+Tree[6].sons[2]:Undefined
+Tree[6].directory[1][1]:Undefined
+Tree[6].directory[1][2]:Undefined
+Tree[6].directory[2][1]:Undefined
+Tree[6].directory[2][2]:Undefined
+Tree[6].slave_pending[1][1]:Undefined
+Tree[6].slave_pending[1][2]:Undefined
+Tree[6].slave_pending[2][1]:Undefined
+Tree[6].slave_pending[2][2]:Undefined
+Tree[6].master_pending[1]:Undefined
+Tree[6].master_pending[2]:Undefined
+Tree[6].reqId:Undefined
+Tree[6].chan1[1].buffer[1].opcode:Undefined
+Tree[6].chan1[1].buffer[1].para:Undefined
+Tree[6].chan1[1].buffer[1].addr:Undefined
+Tree[6].chan1[1].buffer[1].data:Undefined
+Tree[6].chan1[1].buffer[1].dirty:Undefined
+Tree[6].chan1[1].buffer[2].opcode:Undefined
+Tree[6].chan1[1].buffer[2].para:Undefined
+Tree[6].chan1[1].buffer[2].addr:Undefined
+Tree[6].chan1[1].buffer[2].data:Undefined
+Tree[6].chan1[1].buffer[2].dirty:Undefined
+Tree[6].chan1[1].used:Undefined
+Tree[6].chan1[2].buffer[1].opcode:Undefined
+Tree[6].chan1[2].buffer[1].para:Undefined
+Tree[6].chan1[2].buffer[1].addr:Undefined
+Tree[6].chan1[2].buffer[1].data:Undefined
+Tree[6].chan1[2].buffer[1].dirty:Undefined
+Tree[6].chan1[2].buffer[2].opcode:Undefined
+Tree[6].chan1[2].buffer[2].para:Undefined
+Tree[6].chan1[2].buffer[2].addr:Undefined
+Tree[6].chan1[2].buffer[2].data:Undefined
+Tree[6].chan1[2].buffer[2].dirty:Undefined
+Tree[6].chan1[2].used:Undefined
+Tree[6].chan2[1].buffer[1].opcode:Undefined
+Tree[6].chan2[1].buffer[1].para:Undefined
+Tree[6].chan2[1].buffer[1].addr:Undefined
+Tree[6].chan2[1].buffer[1].data:Undefined
+Tree[6].chan2[1].buffer[1].dirty:Undefined
+Tree[6].chan2[1].buffer[2].opcode:Undefined
+Tree[6].chan2[1].buffer[2].para:Undefined
+Tree[6].chan2[1].buffer[2].addr:Undefined
+Tree[6].chan2[1].buffer[2].data:Undefined
+Tree[6].chan2[1].buffer[2].dirty:Undefined
+Tree[6].chan2[1].used:Undefined
+Tree[6].chan2[2].buffer[1].opcode:Undefined
+Tree[6].chan2[2].buffer[1].para:Undefined
+Tree[6].chan2[2].buffer[1].addr:Undefined
+Tree[6].chan2[2].buffer[1].data:Undefined
+Tree[6].chan2[2].buffer[1].dirty:Undefined
+Tree[6].chan2[2].buffer[2].opcode:Undefined
+Tree[6].chan2[2].buffer[2].para:Undefined
+Tree[6].chan2[2].buffer[2].addr:Undefined
+Tree[6].chan2[2].buffer[2].data:Undefined
+Tree[6].chan2[2].buffer[2].dirty:Undefined
+Tree[6].chan2[2].used:Undefined
+Tree[6].chan3[1].buffer[1].opcode:Undefined
+Tree[6].chan3[1].buffer[1].para:Undefined
+Tree[6].chan3[1].buffer[1].addr:Undefined
+Tree[6].chan3[1].buffer[1].data:Undefined
+Tree[6].chan3[1].buffer[1].dirty:Undefined
+Tree[6].chan3[1].buffer[2].opcode:Undefined
+Tree[6].chan3[1].buffer[2].para:Undefined
+Tree[6].chan3[1].buffer[2].addr:Undefined
+Tree[6].chan3[1].buffer[2].data:Undefined
+Tree[6].chan3[1].buffer[2].dirty:Undefined
+Tree[6].chan3[1].used:Undefined
+Tree[6].chan3[2].buffer[1].opcode:Undefined
+Tree[6].chan3[2].buffer[1].para:Undefined
+Tree[6].chan3[2].buffer[1].addr:Undefined
+Tree[6].chan3[2].buffer[1].data:Undefined
+Tree[6].chan3[2].buffer[1].dirty:Undefined
+Tree[6].chan3[2].buffer[2].opcode:Undefined
+Tree[6].chan3[2].buffer[2].para:Undefined
+Tree[6].chan3[2].buffer[2].addr:Undefined
+Tree[6].chan3[2].buffer[2].data:Undefined
+Tree[6].chan3[2].buffer[2].dirty:Undefined
+Tree[6].chan3[2].used:Undefined
+Tree[6].chan4[1].buffer[1].opcode:Undefined
+Tree[6].chan4[1].buffer[1].para:Undefined
+Tree[6].chan4[1].buffer[1].addr:Undefined
+Tree[6].chan4[1].buffer[1].data:Undefined
+Tree[6].chan4[1].buffer[1].dirty:Undefined
+Tree[6].chan4[1].buffer[2].opcode:Undefined
+Tree[6].chan4[1].buffer[2].para:Undefined
+Tree[6].chan4[1].buffer[2].addr:Undefined
+Tree[6].chan4[1].buffer[2].data:Undefined
+Tree[6].chan4[1].buffer[2].dirty:Undefined
+Tree[6].chan4[1].used:Undefined
+Tree[6].chan4[2].buffer[1].opcode:Undefined
+Tree[6].chan4[2].buffer[1].para:Undefined
+Tree[6].chan4[2].buffer[1].addr:Undefined
+Tree[6].chan4[2].buffer[1].data:Undefined
+Tree[6].chan4[2].buffer[1].dirty:Undefined
+Tree[6].chan4[2].buffer[2].opcode:Undefined
+Tree[6].chan4[2].buffer[2].para:Undefined
+Tree[6].chan4[2].buffer[2].addr:Undefined
+Tree[6].chan4[2].buffer[2].data:Undefined
+Tree[6].chan4[2].buffer[2].dirty:Undefined
+Tree[6].chan4[2].used:Undefined
+Tree[6].chan5[1].buffer[1].opcode:Undefined
+Tree[6].chan5[1].buffer[1].addr:Undefined
+Tree[6].chan5[1].buffer[1].data:Undefined
+Tree[6].chan5[1].buffer[1].dirty:Undefined
+Tree[6].chan5[1].buffer[2].opcode:Undefined
+Tree[6].chan5[1].buffer[2].addr:Undefined
+Tree[6].chan5[1].buffer[2].data:Undefined
+Tree[6].chan5[1].buffer[2].dirty:Undefined
+Tree[6].chan5[1].used:Undefined
+Tree[6].chan5[2].buffer[1].opcode:Undefined
+Tree[6].chan5[2].buffer[1].addr:Undefined
+Tree[6].chan5[2].buffer[1].data:Undefined
+Tree[6].chan5[2].buffer[1].dirty:Undefined
+Tree[6].chan5[2].buffer[2].opcode:Undefined
+Tree[6].chan5[2].buffer[2].addr:Undefined
+Tree[6].chan5[2].buffer[2].data:Undefined
+Tree[6].chan5[2].buffer[2].dirty:Undefined
+Tree[6].chan5[2].used:Undefined
+Tree[7].cache.used:0
+Tree[7].cache.line[1].addr:Undefined
+Tree[7].cache.line[1].state:Undefined
+Tree[7].cache.line[1].data:Undefined
+Tree[7].cache.line[1].dirty:Undefined
+Tree[7].cache.line[2].addr:Undefined
+Tree[7].cache.line[2].state:Undefined
+Tree[7].cache.line[2].data:Undefined
+Tree[7].cache.line[2].dirty:Undefined
+Tree[7].cache.valid[1]:0
+Tree[7].cache.valid[2]:0
+Tree[7].sons[1]:Undefined
+Tree[7].sons[2]:Undefined
+Tree[7].directory[1][1]:Undefined
+Tree[7].directory[1][2]:Undefined
+Tree[7].directory[2][1]:Undefined
+Tree[7].directory[2][2]:Undefined
+Tree[7].slave_pending[1][1]:Undefined
+Tree[7].slave_pending[1][2]:Undefined
+Tree[7].slave_pending[2][1]:Undefined
+Tree[7].slave_pending[2][2]:Undefined
+Tree[7].master_pending[1]:Undefined
+Tree[7].master_pending[2]:Undefined
+Tree[7].reqId:Undefined
+Tree[7].chan1[1].buffer[1].opcode:Undefined
+Tree[7].chan1[1].buffer[1].para:Undefined
+Tree[7].chan1[1].buffer[1].addr:Undefined
+Tree[7].chan1[1].buffer[1].data:Undefined
+Tree[7].chan1[1].buffer[1].dirty:Undefined
+Tree[7].chan1[1].buffer[2].opcode:Undefined
+Tree[7].chan1[1].buffer[2].para:Undefined
+Tree[7].chan1[1].buffer[2].addr:Undefined
+Tree[7].chan1[1].buffer[2].data:Undefined
+Tree[7].chan1[1].buffer[2].dirty:Undefined
+Tree[7].chan1[1].used:Undefined
+Tree[7].chan1[2].buffer[1].opcode:Undefined
+Tree[7].chan1[2].buffer[1].para:Undefined
+Tree[7].chan1[2].buffer[1].addr:Undefined
+Tree[7].chan1[2].buffer[1].data:Undefined
+Tree[7].chan1[2].buffer[1].dirty:Undefined
+Tree[7].chan1[2].buffer[2].opcode:Undefined
+Tree[7].chan1[2].buffer[2].para:Undefined
+Tree[7].chan1[2].buffer[2].addr:Undefined
+Tree[7].chan1[2].buffer[2].data:Undefined
+Tree[7].chan1[2].buffer[2].dirty:Undefined
+Tree[7].chan1[2].used:Undefined
+Tree[7].chan2[1].buffer[1].opcode:Undefined
+Tree[7].chan2[1].buffer[1].para:Undefined
+Tree[7].chan2[1].buffer[1].addr:Undefined
+Tree[7].chan2[1].buffer[1].data:Undefined
+Tree[7].chan2[1].buffer[1].dirty:Undefined
+Tree[7].chan2[1].buffer[2].opcode:Undefined
+Tree[7].chan2[1].buffer[2].para:Undefined
+Tree[7].chan2[1].buffer[2].addr:Undefined
+Tree[7].chan2[1].buffer[2].data:Undefined
+Tree[7].chan2[1].buffer[2].dirty:Undefined
+Tree[7].chan2[1].used:Undefined
+Tree[7].chan2[2].buffer[1].opcode:Undefined
+Tree[7].chan2[2].buffer[1].para:Undefined
+Tree[7].chan2[2].buffer[1].addr:Undefined
+Tree[7].chan2[2].buffer[1].data:Undefined
+Tree[7].chan2[2].buffer[1].dirty:Undefined
+Tree[7].chan2[2].buffer[2].opcode:Undefined
+Tree[7].chan2[2].buffer[2].para:Undefined
+Tree[7].chan2[2].buffer[2].addr:Undefined
+Tree[7].chan2[2].buffer[2].data:Undefined
+Tree[7].chan2[2].buffer[2].dirty:Undefined
+Tree[7].chan2[2].used:Undefined
+Tree[7].chan3[1].buffer[1].opcode:Undefined
+Tree[7].chan3[1].buffer[1].para:Undefined
+Tree[7].chan3[1].buffer[1].addr:Undefined
+Tree[7].chan3[1].buffer[1].data:Undefined
+Tree[7].chan3[1].buffer[1].dirty:Undefined
+Tree[7].chan3[1].buffer[2].opcode:Undefined
+Tree[7].chan3[1].buffer[2].para:Undefined
+Tree[7].chan3[1].buffer[2].addr:Undefined
+Tree[7].chan3[1].buffer[2].data:Undefined
+Tree[7].chan3[1].buffer[2].dirty:Undefined
+Tree[7].chan3[1].used:Undefined
+Tree[7].chan3[2].buffer[1].opcode:Undefined
+Tree[7].chan3[2].buffer[1].para:Undefined
+Tree[7].chan3[2].buffer[1].addr:Undefined
+Tree[7].chan3[2].buffer[1].data:Undefined
+Tree[7].chan3[2].buffer[1].dirty:Undefined
+Tree[7].chan3[2].buffer[2].opcode:Undefined
+Tree[7].chan3[2].buffer[2].para:Undefined
+Tree[7].chan3[2].buffer[2].addr:Undefined
+Tree[7].chan3[2].buffer[2].data:Undefined
+Tree[7].chan3[2].buffer[2].dirty:Undefined
+Tree[7].chan3[2].used:Undefined
+Tree[7].chan4[1].buffer[1].opcode:Undefined
+Tree[7].chan4[1].buffer[1].para:Undefined
+Tree[7].chan4[1].buffer[1].addr:Undefined
+Tree[7].chan4[1].buffer[1].data:Undefined
+Tree[7].chan4[1].buffer[1].dirty:Undefined
+Tree[7].chan4[1].buffer[2].opcode:Undefined
+Tree[7].chan4[1].buffer[2].para:Undefined
+Tree[7].chan4[1].buffer[2].addr:Undefined
+Tree[7].chan4[1].buffer[2].data:Undefined
+Tree[7].chan4[1].buffer[2].dirty:Undefined
+Tree[7].chan4[1].used:Undefined
+Tree[7].chan4[2].buffer[1].opcode:Undefined
+Tree[7].chan4[2].buffer[1].para:Undefined
+Tree[7].chan4[2].buffer[1].addr:Undefined
+Tree[7].chan4[2].buffer[1].data:Undefined
+Tree[7].chan4[2].buffer[1].dirty:Undefined
+Tree[7].chan4[2].buffer[2].opcode:Undefined
+Tree[7].chan4[2].buffer[2].para:Undefined
+Tree[7].chan4[2].buffer[2].addr:Undefined
+Tree[7].chan4[2].buffer[2].data:Undefined
+Tree[7].chan4[2].buffer[2].dirty:Undefined
+Tree[7].chan4[2].used:Undefined
+Tree[7].chan5[1].buffer[1].opcode:Undefined
+Tree[7].chan5[1].buffer[1].addr:Undefined
+Tree[7].chan5[1].buffer[1].data:Undefined
+Tree[7].chan5[1].buffer[1].dirty:Undefined
+Tree[7].chan5[1].buffer[2].opcode:Undefined
+Tree[7].chan5[1].buffer[2].addr:Undefined
+Tree[7].chan5[1].buffer[2].data:Undefined
+Tree[7].chan5[1].buffer[2].dirty:Undefined
+Tree[7].chan5[1].used:Undefined
+Tree[7].chan5[2].buffer[1].opcode:Undefined
+Tree[7].chan5[2].buffer[1].addr:Undefined
+Tree[7].chan5[2].buffer[1].data:Undefined
+Tree[7].chan5[2].buffer[1].dirty:Undefined
+Tree[7].chan5[2].buffer[2].opcode:Undefined
+Tree[7].chan5[2].buffer[2].addr:Undefined
+Tree[7].chan5[2].buffer[2].data:Undefined
+Tree[7].chan5[2].buffer[2].dirty:Undefined
+Tree[7].chan5[2].used:Undefined
+memData[1]:dataType_2
+memData[2]:dataType_2
+auxData[1]:dataType_2
+auxData[2]:dataType_2
+
+===== Startstates generated! =====
+
+Progress Report:
+
+	100000 states explored in 8.22s, with 170512 rules fired and 79733 states in the queue.
+====== Now the openlist is cut off! ======
+	200000 states explored in 12.78s, with 398585 rules fired and 52278 states in the queue.
+====== Now the openlist is cut off! ======
+	300000 states explored in 17.16s, with 644617 rules fired and 29977 states in the queue.
+====== Now the openlist is cut off! ======
+	400000 states explored in 22.99s, with 995002 rules fired and 4726 states in the queue.
+	500000 states explored in 28.07s, with 1300824 rules fired and 81540 states in the queue.
+====== Now the openlist is cut off! ======
+	600000 states explored in 33.83s, with 1648269 rules fired and 56341 states in the queue.
+====== Now the openlist is cut off! ======
+	700000 states explored in 40.44s, with 2048160 rules fired and 25874 states in the queue.
+	800000 states explored in 46.53s, with 2414243 rules fired and 96221 states in the queue.
+====== Now the openlist is cut off! ======
+	900000 states explored in 51.99s, with 2737199 rules fired and 70742 states in the queue.
+====== Now the openlist is cut off! ======
+	1000000 states explored in 57.65s, with 3072545 rules fired and 44361 states in the queue.
+====== Now the openlist is cut off! ======
+	1100000 states explored in 63.51s, with 3418898 rules fired and 16685 states in the queue.
+	1200000 states explored in 69.58s, with 3777904 rules fired and 86551 states in the queue.
+====== Now the openlist is cut off! ======
+	1300000 states explored in 76.15s, with 4169354 rules fired and 55412 states in the queue.
+====== Now the openlist is cut off! ======
+	1400000 states explored in 81.81s, with 4511650 rules fired and 28190 states in the queue.
+	1500000 states explored in 87.72s, with 4868879 rules fired and 99451 states in the queue.
+====== Now the openlist is cut off! ======
+	1600000 states explored in 94.30s, with 5262692 rules fired and 68290 states in the queue.
+====== Now the openlist is cut off! ======
+	1700000 states explored in 101.15s, with 5673314 rules fired and 35337 states in the queue.
+====== Now the openlist is cut off! ======
+	1800000 states explored in 108.07s, with 6089040 rules fired and 2340 states in the queue.
+	1900000 states explored in 114.93s, with 6503837 rules fired and 68630 states in the queue.
+====== Now the openlist is cut off! ======
+	2000000 states explored in 121.29s, with 6886772 rules fired and 38789 states in the queue.
+====== Now the openlist is cut off! ======
+	2100000 states explored in 128.78s, with 7336163 rules fired and 3442 states in the queue.
+	2200000 states explored in 135.79s, with 7757901 rules fired and 69111 states in the queue.
+====== Now the openlist is cut off! ======
+	2300000 states explored in 142.79s, with 8175430 rules fired and 36083 states in the queue.
+====== Now the openlist is cut off! ======
+	2400000 states explored in 149.71s, with 8592438 rules fired and 2947 states in the queue.
+	2500000 states explored in 156.46s, with 8994774 rules fired and 68867 states in the queue.
+====== Now the openlist is cut off! ======
+	2600000 states explored in 163.65s, with 9427624 rules fired and 34571 states in the queue.
+	2700000 states explored in 171.52s, with 9902363 rules fired and 96262 states in the queue.
+====== Now the openlist is cut off! ======
+	2800000 states explored in 178.30s, with 10313066 rules fired and 64045 states in the queue.
+====== Now the openlist is cut off! ======
+	2900000 states explored in 184.55s, with 10689497 rules fired and 36514 states in the queue.
+====== Now the openlist is cut off! ======
+	3000000 states explored in 189.90s, with 11012718 rules fired and 17676 states in the queue.
+	3100000 states explored in 195.37s, with 11340853 rules fired and 97391 states in the queue.
+====== Now the openlist is cut off! ======
+	3200000 states explored in 200.73s, with 11660323 rules fired and 78121 states in the queue.
+====== Now the openlist is cut off! ======
+	3300000 states explored in 206.90s, with 12024971 rules fired and 54474 states in the queue.
+====== Now the openlist is cut off! ======
+	3400000 states explored in 212.81s, with 12378221 rules fired and 34777 states in the queue.
+====== Now the openlist is cut off! ======
+	3500000 states explored in 218.72s, with 12729877 rules fired and 16076 states in the queue.
+	3600000 states explored in 224.23s, with 13055848 rules fired and 97486 states in the queue.
+====== Now the openlist is cut off! ======
+	3700000 states explored in 229.96s, with 13395728 rules fired and 78905 states in the queue.
+====== Now the openlist is cut off! ======
+	3800000 states explored in 235.13s, with 13699158 rules fired and 61868 states in the queue.
+====== Now the openlist is cut off! ======
+	3900000 states explored in 240.60s, with 14018281 rules fired and 43123 states in the queue.
+====== Now the openlist is cut off! ======
+	4000000 states explored in 246.19s, with 14344010 rules fired and 23446 states in the queue.
+====== Now the openlist is cut off! ======
+	4100000 states explored in 252.06s, with 14689557 rules fired and 3179 states in the queue.
+	4200000 states explored in 258.36s, with 15062170 rules fired and 80468 states in the queue.
+====== Now the openlist is cut off! ======
+	4300000 states explored in 264.50s, with 15424838 rules fired and 58407 states in the queue.
+====== Now the openlist is cut off! ======
+	4400000 states explored in 270.63s, with 15786580 rules fired and 36079 states in the queue.
+====== Now the openlist is cut off! ======
+	4500000 states explored in 277.24s, with 16177888 rules fired and 12513 states in the queue.
+	4600000 states explored in 284.08s, with 16582219 rules fired and 86337 states in the queue.
+====== Now the openlist is cut off! ======
+	4700000 states explored in 290.66s, with 16968385 rules fired and 61697 states in the queue.
+====== Now the openlist is cut off! ======
+	4800000 states explored in 297.13s, with 17348037 rules fired and 37812 states in the queue.
+====== Now the openlist is cut off! ======
+	4900000 states explored in 304.09s, with 17755513 rules fired and 10767 states in the queue.
+	5000000 states explored in 310.05s, with 18105651 rules fired and 87267 states in the queue.
+====== Now the openlist is cut off! ======
+	5100000 states explored in 315.55s, with 18425166 rules fired and 66906 states in the queue.
+====== Now the openlist is cut off! ======
+	5200000 states explored in 320.65s, with 18720344 rules fired and 47702 states in the queue.
+====== Now the openlist is cut off! ======
+	5300000 states explored in 326.01s, with 19028708 rules fired and 27260 states in the queue.
+====== Now the openlist is cut off! ======
+	5400000 states explored in 331.64s, with 19349040 rules fired and 6054 states in the queue.
+	5500000 states explored in 337.09s, with 19663069 rules fired and 84233 states in the queue.
+====== Now the openlist is cut off! ======
+	5600000 states explored in 342.42s, with 19971471 rules fired and 64688 states in the queue.
+====== Now the openlist is cut off! ======
+	5700000 states explored in 347.62s, with 20272674 rules fired and 45791 states in the queue.
+====== Now the openlist is cut off! ======
+	5800000 states explored in 353.24s, with 20603082 rules fired and 25350 states in the queue.
+====== Now the openlist is cut off! ======
+	5900000 states explored in 359.04s, with 20942434 rules fired and 3145 states in the queue.
+	6000000 states explored in 364.49s, with 21259550 rules fired and 81961 states in the queue.
+====== Now the openlist is cut off! ======
+	6100000 states explored in 369.84s, with 21571216 rules fired and 62023 states in the queue.
+====== Now the openlist is cut off! ======
+	6200000 states explored in 375.28s, with 21888590 rules fired and 41407 states in the queue.
+====== Now the openlist is cut off! ======
+	6300000 states explored in 380.62s, with 22200280 rules fired and 21801 states in the queue.
+	6400000 states explored in 386.25s, with 22528162 rules fired and 99653 states in the queue.
+====== Now the openlist is cut off! ======
+	6500000 states explored in 391.86s, with 22855521 rules fired and 78601 states in the queue.
+====== Now the openlist is cut off! ======
+	6600000 states explored in 397.52s, with 23185939 rules fired and 57399 states in the queue.
+====== Now the openlist is cut off! ======
+	6700000 states explored in 403.31s, with 23523565 rules fired and 35428 states in the queue.
+====== Now the openlist is cut off! ======
+	6800000 states explored in 408.95s, with 23851624 rules fired and 14270 states in the queue.
+	6900000 states explored in 414.46s, with 24173606 rules fired and 93084 states in the queue.
+====== Now the openlist is cut off! ======
+	7000000 states explored in 420.07s, with 24499742 rules fired and 71793 states in the queue.
+====== Now the openlist is cut off! ======
+	7100000 states explored in 425.43s, with 24810907 rules fired and 51946 states in the queue.
+====== Now the openlist is cut off! ======
+	7200000 states explored in 430.84s, with 25125072 rules fired and 32004 states in the queue.
+====== Now the openlist is cut off! ======
+	7300000 states explored in 436.58s, with 25458186 rules fired and 9916 states in the queue.
+	7400000 states explored in 442.07s, with 25778044 rules fired and 88481 states in the queue.
+====== Now the openlist is cut off! ======
+	7500000 states explored in 447.66s, with 26101754 rules fired and 67501 states in the queue.
+====== Now the openlist is cut off! ======
+	7600000 states explored in 453.33s, with 26432757 rules fired and 46290 states in the queue.
+====== Now the openlist is cut off! ======
+	7700000 states explored in 458.93s, with 26758690 rules fired and 25494 states in the queue.
+====== Now the openlist is cut off! ======
+	7800000 states explored in 464.68s, with 27092041 rules fired and 3721 states in the queue.
+	7900000 states explored in 470.17s, with 27409864 rules fired and 81679 states in the queue.
+====== Now the openlist is cut off! ======
+	8000000 states explored in 475.82s, with 27737769 rules fired and 60346 states in the queue.
+====== Now the openlist is cut off! ======
+	8100000 states explored in 481.34s, with 28059023 rules fired and 39582 states in the queue.
+====== Now the openlist is cut off! ======
+	8200000 states explored in 487.06s, with 28392151 rules fired and 17949 states in the queue.
+	8300000 states explored in 492.76s, with 28723900 rules fired and 95159 states in the queue.
+====== Now the openlist is cut off! ======
+	8400000 states explored in 498.13s, with 29036158 rules fired and 75391 states in the queue.
+====== Now the openlist is cut off! ======
+	8500000 states explored in 503.87s, with 29371544 rules fired and 53984 states in the queue.
+====== Now the openlist is cut off! ======
+	8600000 states explored in 509.74s, with 29713064 rules fired and 31484 states in the queue.
+====== Now the openlist is cut off! ======
+	8700000 states explored in 515.45s, with 30045068 rules fired and 10127 states in the queue.
+	8800000 states explored in 521.33s, with 30387266 rules fired and 86619 states in the queue.
+====== Now the openlist is cut off! ======
+	8900000 states explored in 527.14s, with 30725877 rules fired and 64361 states in the queue.
+====== Now the openlist is cut off! ======
+	9000000 states explored in 533.34s, with 31086897 rules fired and 40749 states in the queue.
+====== Now the openlist is cut off! ======
+	9100000 states explored in 539.18s, with 31426365 rules fired and 19126 states in the queue.
+	9200000 states explored in 545.24s, with 31778701 rules fired and 95263 states in the queue.
+====== Now the openlist is cut off! ======
+	9300000 states explored in 550.84s, with 32103618 rules fired and 74621 states in the queue.
+====== Now the openlist is cut off! ======
+	9400000 states explored in 556.95s, with 32458579 rules fired and 51590 states in the queue.
+====== Now the openlist is cut off! ======
+	9500000 states explored in 563.13s, with 32819429 rules fired and 28416 states in the queue.
+====== Now the openlist is cut off! ======
+	9600000 states explored in 568.21s, with 33115384 rules fired and 10041 states in the queue.
+	9700000 states explored in 572.29s, with 33351151 rules fired and 95092 states in the queue.
+====== Now the openlist is cut off! ======
+	9800000 states explored in 576.17s, with 33574604 rules fired and 81384 states in the queue.
+====== Now the openlist is cut off! ======
+	9900000 states explored in 579.92s, with 33790138 rules fired and 67736 states in the queue.
+====== Now the openlist is cut off! ======
+	10000000 states explored in 583.90s, with 34018719 rules fired and 52862 states in the queue.
+====== Now the openlist is cut off! ======
+	10100000 states explored in 588.26s, with 34267778 rules fired and 35879 states in the queue.
+====== Now the openlist is cut off! ======
+	10200000 states explored in 593.00s, with 34541350 rules fired and 17300 states in the queue.
+	10300000 states explored in 597.39s, with 34794985 rules fired and 99566 states in the queue.
+====== Now the openlist is cut off! ======
+	10400000 states explored in 601.83s, with 35052328 rules fired and 82551 states in the queue.
+====== Now the openlist is cut off! ======
+	10500000 states explored in 606.47s, with 35321660 rules fired and 64368 states in the queue.
+====== Now the openlist is cut off! ======
+	10600000 states explored in 611.10s, with 35590732 rules fired and 45962 states in the queue.
+====== Now the openlist is cut off! ======
+	10700000 states explored in 615.86s, with 35865846 rules fired and 27211 states in the queue.
+====== Now the openlist is cut off! ======
+	10800000 states explored in 620.95s, with 36164921 rules fired and 7145 states in the queue.
+	10900000 states explored in 626.43s, with 36488871 rules fired and 85376 states in the queue.
+====== Now the openlist is cut off! ======
+	11000000 states explored in 631.81s, with 36807010 rules fired and 65628 states in the queue.
+====== Now the openlist is cut off! ======
+	11100000 states explored in 637.20s, with 37124284 rules fired and 46397 states in the queue.
+====== Now the openlist is cut off! ======
+	11200000 states explored in 643.36s, with 37489581 rules fired and 23683 states in the queue.
+====== Now the openlist is cut off! ======
+	11300000 states explored in 649.38s, with 37847787 rules fired and 1498 states in the queue.
+	11400000 states explored in 655.78s, with 38236093 rules fired and 75046 states in the queue.
+====== Now the openlist is cut off! ======
+	11500000 states explored in 662.51s, with 38647341 rules fired and 48592 states in the queue.
+====== Now the openlist is cut off! ======
+	11600000 states explored in 668.96s, with 39042470 rules fired and 24801 states in the queue.
+	11700000 states explored in 676.21s, with 39492047 rules fired and 95636 states in the queue.
+====== Now the openlist is cut off! ======
+	11800000 states explored in 683.11s, with 39922868 rules fired and 69257 states in the queue.
+====== Now the openlist is cut off! ======
+	11900000 states explored in 689.63s, with 40323651 rules fired and 44766 states in the queue.
+====== Now the openlist is cut off! ======
+	12000000 states explored in 696.10s, with 40723256 rules fired and 20561 states in the queue.
+	12100000 states explored in 702.61s, with 41124546 rules fired and 95054 states in the queue.
+====== Now the openlist is cut off! ======
+	12200000 states explored in 709.08s, with 41519365 rules fired and 71465 states in the queue.
+====== Now the openlist is cut off! ======
+	12300000 states explored in 715.54s, with 41915417 rules fired and 47424 states in the queue.
+====== Now the openlist is cut off! ======
+	12400000 states explored in 722.13s, with 42317829 rules fired and 23415 states in the queue.
+	12500000 states explored in 728.66s, with 42717488 rules fired and 98311 states in the queue.
+====== Now the openlist is cut off! ======
+	12600000 states explored in 735.31s, with 43126459 rules fired and 73661 states in the queue.
+====== Now the openlist is cut off! ======
+	12700000 states explored in 741.91s, with 43534116 rules fired and 49080 states in the queue.
+====== Now the openlist is cut off! ======
+	12800000 states explored in 748.54s, with 43938465 rules fired and 24581 states in the queue.
+	12900000 states explored in 755.10s, with 44339557 rules fired and 99968 states in the queue.
+====== Now the openlist is cut off! ======
+	13000000 states explored in 761.61s, with 44739564 rules fired and 76103 states in the queue.
+====== Now the openlist is cut off! ======
+	13100000 states explored in 768.06s, with 45134587 rules fired and 51989 states in the queue.
+====== Now the openlist is cut off! ======
+	13200000 states explored in 774.49s, with 45525466 rules fired and 28526 states in the queue.
+====== Now the openlist is cut off! ======
+	13300000 states explored in 781.11s, with 45931053 rules fired and 3894 states in the queue.
+	13400000 states explored in 787.71s, with 46335613 rules fired and 78755 states in the queue.
+====== Now the openlist is cut off! ======
+	13500000 states explored in 794.28s, with 46739917 rules fired and 54417 states in the queue.
+====== Now the openlist is cut off! ======
+	13600000 states explored in 801.01s, with 47154498 rules fired and 29832 states in the queue.
+====== Now the openlist is cut off! ======
+	13700000 states explored in 807.73s, with 47568013 rules fired and 5358 states in the queue.
+	13800000 states explored in 814.44s, with 47981492 rules fired and 79847 states in the queue.
+====== Now the openlist is cut off! ======
+	13900000 states explored in 821.09s, with 48393280 rules fired and 55061 states in the queue.
+====== Now the openlist is cut off! ======
+	14000000 states explored in 827.84s, with 48811715 rules fired and 30059 states in the queue.
+====== Now the openlist is cut off! ======
+	14100000 states explored in 834.64s, with 49230506 rules fired and 4970 states in the queue.
+	14200000 states explored in 841.33s, with 49638227 rules fired and 79700 states in the queue.
+====== Now the openlist is cut off! ======
+	14300000 states explored in 848.23s, with 50059836 rules fired and 54655 states in the queue.
+====== Now the openlist is cut off! ======
+	14400000 states explored in 855.36s, with 50498172 rules fired and 28815 states in the queue.
+====== Now the openlist is cut off! ======
+	14500000 states explored in 862.85s, with 50958714 rules fired and 1696 states in the queue.
+	14600000 states explored in 870.16s, with 51407842 rules fired and 74390 states in the queue.
+====== Now the openlist is cut off! ======
+	14700000 states explored in 877.11s, with 51831112 rules fired and 49524 states in the queue.
+====== Now the openlist is cut off! ======
+	14800000 states explored in 883.87s, with 52243437 rules fired and 24923 states in the queue.
+	14900000 states explored in 890.66s, with 52660623 rules fired and 99110 states in the queue.
+====== Now the openlist is cut off! ======
+	15000000 states explored in 897.60s, with 53085373 rules fired and 73972 states in the queue.
+====== Now the openlist is cut off! ======
+	15100000 states explored in 905.10s, with 53543065 rules fired and 46944 states in the queue.
+====== Now the openlist is cut off! ======
+	15200000 states explored in 912.06s, with 53965911 rules fired and 22673 states in the queue.
+	15300000 states explored in 919.45s, with 54418264 rules fired and 95673 states in the queue.
+====== Now the openlist is cut off! ======
+	15400000 states explored in 926.17s, with 54831309 rules fired and 72110 states in the queue.
+====== Now the openlist is cut off! ======
+	15500000 states explored in 932.77s, with 55234278 rules fired and 48825 states in the queue.
+====== Now the openlist is cut off! ======
+	15600000 states explored in 939.71s, with 55655060 rules fired and 24314 states in the queue.
+	15700000 states explored in 946.81s, with 56090387 rules fired and 97598 states in the queue.
+====== Now the openlist is cut off! ======
+	15800000 states explored in 953.88s, with 56522624 rules fired and 72075 states in the queue.
+====== Now the openlist is cut off! ======
+	15900000 states explored in 960.95s, with 56952690 rules fired and 46621 states in the queue.
+====== Now the openlist is cut off! ======
+	16000000 states explored in 968.21s, with 57394649 rules fired and 20449 states in the queue.
+	16100000 states explored in 975.82s, with 57860041 rules fired and 91838 states in the queue.
+====== Now the openlist is cut off! ======
+	16200000 states explored in 983.03s, with 58301728 rules fired and 65540 states in the queue.
+====== Now the openlist is cut off! ======
+	16300000 states explored in 990.13s, with 58734285 rules fired and 40092 states in the queue.
+====== Now the openlist is cut off! ======
+	16400000 states explored in 997.32s, with 59171604 rules fired and 14124 states in the queue.
+	16500000 states explored in 1004.50s, with 59607015 rules fired and 86984 states in the queue.
+====== Now the openlist is cut off! ======
+	16600000 states explored in 1011.74s, with 60046354 rules fired and 60796 states in the queue.
+====== Now the openlist is cut off! ======
+	16700000 states explored in 1019.01s, with 60487467 rules fired and 34528 states in the queue.
+====== Now the openlist is cut off! ======
+	16800000 states explored in 1026.08s, with 60914585 rules fired and 9274 states in the queue.
+	16900000 states explored in 1033.18s, with 61342740 rules fired and 83095 states in the queue.
+====== Now the openlist is cut off! ======
+	17000000 states explored in 1040.91s, with 61810555 rules fired and 55133 states in the queue.
+====== Now the openlist is cut off! ======
+	17100000 states explored in 1048.54s, with 62274677 rules fired and 27043 states in the queue.
+	17200000 states explored in 1056.54s, with 62762336 rules fired and 96761 states in the queue.
+====== Now the openlist is cut off! ======
+	17300000 states explored in 1064.52s, with 63249764 rules fired and 67711 states in the queue.
+====== Now the openlist is cut off! ======
+	17400000 states explored in 1072.07s, with 63710691 rules fired and 39639 states in the queue.
+====== Now the openlist is cut off! ======
+	17500000 states explored in 1080.01s, with 64196114 rules fired and 10225 states in the queue.
+	17600000 states explored in 1087.53s, with 64651500 rules fired and 82967 states in the queue.
+====== Now the openlist is cut off! ======
+	17700000 states explored in 1094.84s, with 65096424 rules fired and 57109 states in the queue.
+====== Now the openlist is cut off! ======
+	17800000 states explored in 1102.33s, with 65553357 rules fired and 30426 states in the queue.
+====== Now the openlist is cut off! ======
+	17900000 states explored in 1110.21s, with 66033299 rules fired and 2558 states in the queue.
+	18000000 states explored in 1117.94s, with 66502833 rules fired and 74275 states in the queue.
+====== Now the openlist is cut off! ======
+	18100000 states explored in 1125.93s, with 66988605 rules fired and 46083 states in the queue.
+====== Now the openlist is cut off! ======
+	18200000 states explored in 1133.45s, with 67443932 rules fired and 19674 states in the queue.
+	18300000 states explored in 1140.99s, with 67896474 rules fired and 92792 states in the queue.
+====== Now the openlist is cut off! ======
+	18400000 states explored in 1148.88s, with 68377031 rules fired and 65305 states in the queue.
+====== Now the openlist is cut off! ======
+	18500000 states explored in 1156.53s, with 68846946 rules fired and 38086 states in the queue.
+====== Now the openlist is cut off! ======
+	18600000 states explored in 1164.79s, with 69345586 rules fired and 9433 states in the queue.
+	18700000 states explored in 1172.48s, with 69820761 rules fired and 79620 states in the queue.
+====== Now the openlist is cut off! ======
+	18800000 states explored in 1180.56s, with 70307565 rules fired and 52019 states in the queue.
+====== Now the openlist is cut off! ======
+	18900000 states explored in 1188.71s, with 70807869 rules fired and 22964 states in the queue.
+	19000000 states explored in 1197.16s, with 71319531 rules fired and 92429 states in the queue.
+====== Now the openlist is cut off! ======
+	19100000 states explored in 1205.96s, with 71851399 rules fired and 62240 states in the queue.
+====== Now the openlist is cut off! ======
+	19200000 states explored in 1214.12s, with 72344151 rules fired and 33318 states in the queue.
+====== Now the openlist is cut off! ======
+	19300000 states explored in 1222.56s, with 72852842 rules fired and 4365 states in the queue.
+	19400000 states explored in 1231.13s, with 73368442 rules fired and 74127 states in the queue.
+====== Now the openlist is cut off! ======
+	19500000 states explored in 1239.65s, with 73882724 rules fired and 44174 states in the queue.
+====== Now the openlist is cut off! ======
+	19600000 states explored in 1247.92s, with 74383637 rules fired and 15468 states in the queue.
+	19700000 states explored in 1256.97s, with 74928302 rules fired and 82983 states in the queue.
+====== Now the openlist is cut off! ======
+	19800000 states explored in 1265.62s, with 75449920 rules fired and 52664 states in the queue.
+====== Now the openlist is cut off! ======
+	19900000 states explored in 1274.26s, with 75969838 rules fired and 22028 states in the queue.
+	20000000 states explored in 1282.49s, with 76468070 rules fired and 92068 states in the queue.
+====== Now the openlist is cut off! ======
+	20100000 states explored in 1292.15s, with 77046334 rules fired and 58813 states in the queue.
+====== Now the openlist is cut off! ======
+	20200000 states explored in 1301.12s, with 77580152 rules fired and 28020 states in the queue.
+	20300000 states explored in 1310.06s, with 78112979 rules fired and 96127 states in the queue.
+====== Now the openlist is cut off! ======
+	20400000 states explored in 1319.05s, with 78653611 rules fired and 64892 states in the queue.
+====== Now the openlist is cut off! ======
+	20500000 states explored in 1327.83s, with 79189436 rules fired and 33222 states in the queue.
+====== Now the openlist is cut off! ======
+	20600000 states explored in 1336.56s, with 79712367 rules fired and 2125 states in the queue.
+	20700000 states explored in 1344.79s, with 80207375 rules fired and 71631 states in the queue.
+====== Now the openlist is cut off! ======
+	20800000 states explored in 1353.44s, with 80725193 rules fired and 40430 states in the queue.
+====== Now the openlist is cut off! ======
+	20900000 states explored in 1363.10s, with 81306748 rules fired and 3240 states in the queue.
+	21000000 states explored in 1372.48s, with 81865957 rules fired and 63763 states in the queue.
+====== Now the openlist is cut off! ======
+	21100000 states explored in 1381.58s, with 82394866 rules fired and 27553 states in the queue.
+	21200000 states explored in 1391.23s, with 82951354 rules fired and 86794 states in the queue.
+====== Now the openlist is cut off! ======
+	21300000 states explored in 1400.62s, with 83496719 rules fired and 48540 states in the queue.
+====== Now the openlist is cut off! ======
+	21400000 states explored in 1410.31s, with 84059908 rules fired and 8664 states in the queue.
+	21500000 states explored in 1420.45s, with 84644502 rules fired and 64922 states in the queue.
+====== Now the openlist is cut off! ======
+	21600000 states explored in 1429.52s, with 85167478 rules fired and 28841 states in the queue.
+	21700000 states explored in 1438.26s, with 85655899 rules fired and 98434 states in the queue.
+====== Now the openlist is cut off! ======
+	21800000 states explored in 1446.37s, with 86086994 rules fired and 74667 states in the queue.
+====== Now the openlist is cut off! ======
+	21900000 states explored in 1454.89s, with 86508820 rules fired and 50900 states in the queue.
+====== Now the openlist is cut off! ======
+	22000000 states explored in 1467.98s, with 86956967 rules fired and 25379 states in the queue.
+
+Error:
+
+	Closed hash table full.
+
+
+

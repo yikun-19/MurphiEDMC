@@ -1,0 +1,83 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Oct 24 2023
+Include files last modified date:    Jul 23 2021
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.5.0
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.5.0 is based on various versions of Murphi.
+Caching Murphi Release 5.5.0 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: TL-C_In_S_data
+
+Algorithm:
+	Verification by depth first search.
+	with symmetry algorithm 3 -- Heuristic Small Memory Normalization
+	with permutation trial limit 10.
+
+Memory usage:
+
+	* The size of each state is 1808 bits (rounded up to 232 bytes).
+	* The memory allocated for the hash table and state queue is
+	  10485 Mbytes.
+	  With two words of overhead per state, the maximum size of
+	  the state space is 43545527 states.
+	   * Use option "-k" or "-m" to increase this, if necessary.
+	* Capacity in queue for depth-first search: 4354552 states.
+	   * Change the constant gPercentActiveStates in mu_prolog.inc
+	     to increase this, if necessary.
+
+Warning: No trace will not be printed in the case of protocol errors!
+         Check the options if you want to have error traces.
+
+Progress Report:
+
+	10000 states explored in 2.55s, with 28397 rules fired and 5026 states in the queue.
+	20000 states explored in 2.63s, with 58369 rules fired and 10002 states in the queue.
+	30000 states explored in 2.71s, with 86955 rules fired and 15262 states in the queue.
+	40000 states explored in 2.80s, with 118748 rules fired and 20094 states in the queue.
+	50000 states explored in 2.89s, with 151149 rules fired and 24519 states in the queue.
+	60000 states explored in 2.98s, with 182053 rules fired and 29479 states in the queue.
+	70000 states explored in 3.06s, with 209561 rules fired and 34795 states in the queue.
+	80000 states explored in 3.15s, with 238500 rules fired and 39732 states in the queue.
+	90000 states explored in 3.23s, with 269098 rules fired and 44839 states in the queue.
+	100000 states explored in 3.32s, with 301195 rules fired and 49772 states in the queue.
+	110000 states explored in 3.42s, with 335614 rules fired and 54347 states in the queue.
+	120000 states explored in 3.51s, with 368672 rules fired and 58910 states in the queue.
+	130000 states explored in 3.60s, with 402280 rules fired and 63554 states in the queue.
+	140000 states explored in 3.69s, with 430639 rules fired and 69034 states in the queue.
+	150000 states explored in 3.78s, with 464525 rules fired and 73643 states in the queue.
+	160000 states explored in 3.87s, with 496073 rules fired and 78450 states in the queue.
+	170000 states explored in 3.97s, with 528808 rules fired and 82913 states in the queue.
+
+==========================================================================
+
+Result:
+
+	Invariant "test_reachable_state_29" failed.
+
+State Space Explored:
+
+	173867 states, 540490 rules fired in 4.00s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.

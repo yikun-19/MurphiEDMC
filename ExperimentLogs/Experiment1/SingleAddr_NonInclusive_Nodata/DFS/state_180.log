@@ -1,0 +1,109 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Oct  9 2023
+Include files last modified date:    Jul 23 2021
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.5.0
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.5.0 is based on various versions of Murphi.
+Caching Murphi Release 5.5.0 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: ./models/TL-C_NonIn_S_nodata
+
+Algorithm:
+	Verification by depth first search.
+	with symmetry algorithm 3 -- Heuristic Small Memory Normalization
+	with permutation trial limit 10.
+
+Memory usage:
+
+	* The size of each state is 1456 bits (rounded up to 184 bytes).
+	* The memory allocated for the hash table and state queue is
+	  10485 Mbytes.
+	  With two words of overhead per state, the maximum size of
+	  the state space is 54386729 states.
+	   * Use option "-k" or "-m" to increase this, if necessary.
+	* Capacity in queue for depth-first search: 5438672 states.
+	   * Change the constant gPercentActiveStates in mu_prolog.inc
+	     to increase this, if necessary.
+
+Warning: No trace will not be printed in the case of protocol errors!
+         Check the options if you want to have error traces.
+
+Progress Report:
+
+	10000 states explored in 2.63s, with 17029 rules fired and 9283 states in the queue.
+	20000 states explored in 2.69s, with 36403 rules fired and 18007 states in the queue.
+	30000 states explored in 2.75s, with 56747 rules fired and 26633 states in the queue.
+	40000 states explored in 2.82s, with 78970 rules fired and 34811 states in the queue.
+	50000 states explored in 2.89s, with 102278 rules fired and 42641 states in the queue.
+	60000 states explored in 2.96s, with 125688 rules fired and 50536 states in the queue.
+	70000 states explored in 3.03s, with 149297 rules fired and 58390 states in the queue.
+	80000 states explored in 3.11s, with 176969 rules fired and 64969 states in the queue.
+	90000 states explored in 3.18s, with 202200 rules fired and 72431 states in the queue.
+	100000 states explored in 3.26s, with 229569 rules fired and 79334 states in the queue.
+	110000 states explored in 3.33s, with 257119 rules fired and 86227 states in the queue.
+	120000 states explored in 3.41s, with 286406 rules fired and 93075 states in the queue.
+	130000 states explored in 3.49s, with 314420 rules fired and 100063 states in the queue.
+	140000 states explored in 3.57s, with 342949 rules fired and 106628 states in the queue.
+	150000 states explored in 3.65s, with 371121 rules fired and 113448 states in the queue.
+	160000 states explored in 3.73s, with 400146 rules fired and 119927 states in the queue.
+	170000 states explored in 3.82s, with 432366 rules fired and 125803 states in the queue.
+	180000 states explored in 3.89s, with 460031 rules fired and 133024 states in the queue.
+	190000 states explored in 3.98s, with 492752 rules fired and 139068 states in the queue.
+	200000 states explored in 4.06s, with 522848 rules fired and 145551 states in the queue.
+	210000 states explored in 4.15s, with 555716 rules fired and 151014 states in the queue.
+	220000 states explored in 4.25s, with 593394 rules fired and 155763 states in the queue.
+	230000 states explored in 4.34s, with 625582 rules fired and 161427 states in the queue.
+	240000 states explored in 4.43s, with 660126 rules fired and 166706 states in the queue.
+	250000 states explored in 4.51s, with 691208 rules fired and 173205 states in the queue.
+	260000 states explored in 4.60s, with 725159 rules fired and 179152 states in the queue.
+	270000 states explored in 4.69s, with 759883 rules fired and 184864 states in the queue.
+	280000 states explored in 4.77s, with 792641 rules fired and 190938 states in the queue.
+	290000 states explored in 4.86s, with 826297 rules fired and 196656 states in the queue.
+	300000 states explored in 4.95s, with 858959 rules fired and 202873 states in the queue.
+	310000 states explored in 5.04s, with 893400 rules fired and 208229 states in the queue.
+	320000 states explored in 5.15s, with 934124 rules fired and 211593 states in the queue.
+	330000 states explored in 5.24s, with 967264 rules fired and 217658 states in the queue.
+	340000 states explored in 5.32s, with 997256 rules fired and 224487 states in the queue.
+	350000 states explored in 5.41s, with 1033099 rules fired and 229442 states in the queue.
+	360000 states explored in 5.49s, with 1064906 rules fired and 235788 states in the queue.
+	370000 states explored in 5.59s, with 1099563 rules fired and 241414 states in the queue.
+	380000 states explored in 5.68s, with 1135580 rules fired and 246845 states in the queue.
+	390000 states explored in 5.77s, with 1169369 rules fired and 252451 states in the queue.
+	400000 states explored in 5.88s, with 1212914 rules fired and 255756 states in the queue.
+	410000 states explored in 5.98s, with 1254804 rules fired and 259755 states in the queue.
+	420000 states explored in 6.07s, with 1290115 rules fired and 265573 states in the queue.
+	430000 states explored in 6.17s, with 1328459 rules fired and 270088 states in the queue.
+
+==========================================================================
+
+Result:
+
+	Invariant "test_reachable_state_180" failed.
+
+State Space Explored:
+
+	431354 states, 1333293 rules fired in 6.18s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.
