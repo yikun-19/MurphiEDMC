@@ -107,7 +107,7 @@ Specifially, **Experiment1** corresponds to the comparative experiments of all t
 
 ![](/Figs/RA_lab_tree.png)
  
-The figure above, representing a reachable coherence tree, is the 2nd case of **RA_lab/CoherenceTrees/Non-Inclusive/Non-Inclusive_Tree_Level#3.txt**:
+The figure above, representing a reachable coherence tree, is the 2nd case of **Benchmarks/states/states_Inclusive_visualization.txt**:
 ```
 2
 TLState.INVALID
@@ -120,12 +120,12 @@ TLState.INVALID
 ```
 
 ### Invariants
-To analyse the reachability of it in the Murphi, we negate the logical conjunction of the cache states of all tree nodes, taking the result as the corresponding invariant, as shown below. This example is the 2nd case of **RA_lab/CoherenceTrees/Non-Inclusive/Non-Inclusive_Invariants_Level#3.txt**. 
+To analyse the reachability of it in the Murphi, we negate the logical conjunction of the cache states of all tree nodes, taking the result as the corresponding invariant, as shown below. This example is the 2nd case of **Benchmarks/states/states_Inclusive_visualization.txt**. 
 ```
 invariant "test_reachable_state_2"
     !( Tree[1].cache.state = None & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = Branch );
 ```
-In the next step it's put in the **Non-Inclusive/TL-C_NonIn.m** or **Non-Inclusive/TL-C_NonIn_data.m** and checked by Murphi. When this invariant is violated, it indicates that the corresponding cache coherence tree is reachable for the current protocol model. All invariants of NonInclusive TL-C, including this one, are stored in the file **RA_lab/CoherenceTrees/Non-Inclusive/Non-Inclusive_Invariants_Level#3.txt** and **RA_lab/CoherenceTrees/Non-Inclusive/Non-Inclusive_Invariants_Level#2.txt**(the Level#*n* means a coherence tree with *n* levels). Notice that the structure of coherence tree has nothing to do with data, so TL-C_NonIn and TL-C_NonIn_Data have the same invariants.
+In the next step it's put in the **Benchmarks/models/Murphi/<TL-C_model>.m** and checked by Murphi. When this invariant is violated, it indicates that the corresponding cache coherence tree is reachable for the current protocol model. All invariants of NonInclusive TL-C, including this one, are stored in the file **Benchmarks/states/states_NonInclusive_visualization.txt**. Notice that the structure of coherence tree has nothing to do with data, so TL-C_NonIn and TL-C_NonIn_Data have the same invariants.
 
 ### Result Links
 
