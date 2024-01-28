@@ -14,7 +14,7 @@ Please first check if your environment meets the following requirement:
 2. g++ 9.4.0 
 3. Python 3.8.10
 
-Now let's install Murphi_LS and its dependencies:
+Now let's install MurphiEDMC and its dependencies:
 ```
   sudo make install 
   sudo apt-get install flex 
