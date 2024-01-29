@@ -131,16 +131,14 @@ In the next step it's put in the **Benchmarks/models/Murphi/<TL-C_model>.m** and
 
 All results of reachability analysis are shown below, clicking on the link will jump to the statistical table for the corresponding model. 
 
-|       Protocol       | #Depth | #Coherence Trees |     RA result file link    |
-|:--------------------:|:------:|:----------------:|:--------------------------:|
-|        TL-C-In       |    2   |         7        | [statistical_table1](../blob/master/RA_lab/Traces/TL-C_In/Level%232/RA_result_sheet1.md) |
-|                      |    3   |         38       | [statistical_table2](../blob/master/RA_lab/Traces/TL-C_In/Level%233/RA_result_sheet2.md) |
-|     TL-C-In\_data    |    2   |         7        | [statistical_table3](../blob/master/RA_lab/Traces/TL-C_In_data/Level%232/RA_result_sheet3.md) |
-|                      |    3   |         38       | [statistical_table4](../blob/master/RA_lab/Traces/TL-C_In_data/Level%233/RA_result_sheet4.md) |
-|    NI-TL\_C-NonIn    |    2   |         16       | [statistical_table5](../blob/master/RA_lab/Traces/TL-C_NonIn/Level%232/RA_result_sheet5.md) |
-|                      |    3   |         224      | [statistical_table](../blob/master/RA_lab/Traces/TL-C_NonIn/Level%233/RA_result_sheet6.md) |
-| NI-TL\_C-NonIn\_data |    2   |         16       | [statistical_table7](../blob/master/RA_lab/Traces/TL-C_NonIn_data/Level%232/RA_result_sheet7.md) |
-|                      |    3   |         224      | [statistical_table8](../blob/master/RA_lab/Traces/TL-C_NonIn_data/Level%233/RA_result_sheet8.md) |
+|       Protocol         | #Coherence Trees  | BFS | DFS | A*  | EDMC |    result file link    |
+|:----------------------:|:-----------------:|:---:|:---:|:---:|:----:|:----------------------:|
+| TL-C\_S\_In\_NoData    |        38         |  38 |  38 |  38 |  38  | [statistical_table1](./ExperimentLogs/Experiment1/SingleAddr_Inclusive_Nodata/result.md) |
+| TL-C\_S\_In\_Data      |        38         |  38 |  38 |  38 |  38  | [statistical_table2](./ExperimentLogs/Experiment1/SingleAddr_Inclusive_Data/result.md) |
+| TL-C\_S\_NonIn\_NoData |       224         | 224 | 220 | 224 | 224  | [statistical_table3](./ExperimentLogs/Experiment1/SingleAddr_NonInclusive_Nodata/result.md) |
+| TL-C\_S\_NonIn\_Data   |       224         | 223 | 202 | 224 | 224  | [statistical_table4](./ExperimentLogs/Experiment1/SingleAddr_NonInclusive_Data/result.md) |
+| TL-C\_M\_In\_Data      |        38         |  25 |  10 |  38 |  38  | [statistical_table5](./ExperimentLogs/Experiment1/MultipleAddr_Inclusive_Data/result.md) |
+| TL-C\_M\_NonIn\_Data   |       224         |  20 |  11 | 134 | 201  | [statistical_table6](./ExperimentLogs/Experiment1/MultipleAddr_NonInclusive_Data/result.md) |
 
 
 ## Experiments
