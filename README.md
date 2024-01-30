@@ -46,6 +46,7 @@ Since MurphiEDMC invokes Z3 when parsing the protocol model, we need to install 
 ```
 
 2. Or if you want to set options with MurphiEDMC as you wish(e.g., -localsearch/-vbfs/vdfs), you can run the following three commands:
+
   1. Parser Murphi file to Cpp file: 
   ```
     ../src/mu <testcase_name>.m 
@@ -55,7 +56,7 @@ Since MurphiEDMC invokes Z3 when parsing the protocol model, we need to install 
   ```
     g++ -ggdb -o <testcase_name>.o <testcase_name>.cpp -I ../include -lm  
   ```
-  
+
   3. Run execute file with 5000MB memory limitation and the selected algorithm
   ```
     ./<testcase_name>.o -localsearch -m 5000 
@@ -93,6 +94,7 @@ MurphiEDMC
 
 ### MurphiEDMC
 
+This directory contains the source code (**src**), the algorithm library (**include**), and simple test cases (**test**) for MurphiEDMC. When verifying specific protocols, **src/mu** compiles <protocol>.m into <protocol>.cpp, and then g++ <protocol>.o <protocol>.cpp -I **../include** is invoked. 
 
 ### Benchmarks
 
@@ -114,7 +116,18 @@ Specifially, **Experiment1** corresponds to the comparative experiments of all t
 
 ## Target States
 
-### CoherenceTrees
+### TL-C protocol models
+
+TL-C(Tilelink Cached) is a standard interface for on-chip communication in modern computer systems. It provides a scalable, low-latency and coherent way of exchanging data between different components of a System-on-Chip (SoC) design, such as processors, accelerators, and memory controllers. They enable the creation of homogeneous and heterogeneous many-core systems by providing a simple and uniform way of accessing memory and I/O resources. 
+
+Essentially, TL-C is a widely used hierarchy cache protocol in RISC-V systems. Its basic framework is shown below.
+
+![](./Figs/Hierarchy.png)
+
+According to the specification of TileLink, we generate all coherence trees and check their reachability. The ability to search for the target state is also an important part of bug hunting, which is one of the most valuable features of model checking tools. 
+
+
+### Coherence Trees
 
 ![](./Figs/RA_lab_tree.png)
  
@@ -130,6 +143,24 @@ TLState.INVALID
     └── TLState.BRANCH
 ```
 
+### Generating All Possible Coherence Trees
+
+In **Benchmarks/states**, we provide the Python scripts to generate all possible coherence trees of TL-C models. The program **generate.py** can generate the protocol automatically according to the parameters entered by user. There are 4 parameters that determine the structure of coherence tree, inclusion policies and data control:
+
+- d(depth): Determine the height of the tree(default: 2);
+- b(branch): Determine the number of children for each node(default: 2);
+- i(inclusion): Decide whether to adopt the inclusive or non-inclusive policy(default: inclusive);
+- c(data control): Decide whether to add data and related controls(default: False).
+
+For example, we can run **generate.py** with
+
+```
+python generate.py -d 3 -b 2 -i inclusive -c true
+```
+
+to obtain a protocol with 3-level cache coherence tree. 
+
+
 ### Invariants
 To analyse the reachability of it in the Murphi, we negate the logical conjunction of the cache states of all tree nodes, taking the result as the corresponding invariant, as shown below. This example is the 2nd case of **Benchmarks/states/states_Inclusive_visualization.txt**. 
 ```
@@ -138,7 +169,12 @@ invariant "test_reachable_state_2"
 ```
 In the next step it's put in the **Benchmarks/models/Murphi/<TL-C_model>.m** and checked by Murphi. When this invariant is violated, it indicates that the corresponding cache coherence tree is reachable for the current protocol model. All invariants of NonInclusive TL-C, including this one, are stored in the file **Benchmarks/states/states_NonInclusive_visualization.txt**. Notice that the structure of coherence tree has nothing to do with data, so TL-C_NonIn and TL-C_NonIn_Data have the same invariants.
 
-### Result Links
+
+## Experiments
+
+This section provides a overall of our experiments. The corresponding figures and original log files, and statistical tables are presented. 
+
+### Experiment1
 
 All results of reachability analysis are shown below, clicking on the link will jump to the statistical table for the corresponding model. 
 
@@ -152,6 +188,26 @@ All results of reachability analysis are shown below, clicking on the link will 
 | TL-C\_M\_NonIn\_Data   |       224         |  20 |  11 | 134 | 201  | [statistical_table6](./ExperimentLogs/Experiment1/MultipleAddr_NonInclusive_Data/result.md) |
 
 
-## Experiments
+### Experiment2.1
+
+These scoring functions were applied in the reachability analysis of TileLink protocol:
+
+- H1: Using Hamming distance between the current state and the target state as the heuristic score for the current state.
+- H2: Using Formula-based distance between the current state and the target state as the heuristic score for the current state.
+- H3: Using Relationship-based Distance between the current state and the target state as the heuristic score for the current state.
+
+The result of different heuristic functions is shown here. 
+
+![ Comparing H3 with typical socring funtions](./Figs/RA_lab_tree.png)
+
+
+### Experiment2.2
+
+In order to validate the effectiveness of the Simulated Annealing(SA), we replace the SA module in EDMC with BeFS, and keep
+other components(e.g., the scoring function) consistent. We conduct the relevant comparative experiments on the above Tilelink models. 
+
+![Comparing EDMC with Heu(EDMC without SA)](./Figs/SA.png)
+
+
 
 
