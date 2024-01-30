@@ -105,7 +105,7 @@ Specifially, **Experiment1** corresponds to the comparative experiments of all t
 
 ### CoherenceTrees
 
-![](/Figs/RA_lab_tree.png)
+![](./Figs/RA_lab_tree.png)
  
 The figure above, representing a reachable coherence tree, is the 2nd case of **Benchmarks/states/states_Inclusive_visualization.txt**:
 ```
