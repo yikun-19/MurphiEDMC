@@ -198,7 +198,7 @@ These scoring functions were applied in the reachability analysis of TileLink pr
 
 The result of different heuristic functions is shown here. 
 
-![ Comparing H3 with typical socring funtions](./Figs/RA_lab_tree.png)
+![ Comparing H3 with typical socring funtions](./Figs/Heuristic.png)
 
 
 ### Experiment2.2
