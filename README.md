@@ -3,30 +3,32 @@
 
 ## Overview
 
-MurphiEDMC is a model checker designed to alleviate the state space explosion. Our development work is based on Murphi, which is a popular explicit model checker. 
-MurphiEDMC is more likely to work well on very complex protocol models at the same cost(e.g., time, memory).
+MurphiEDMC is an explicit model checker designed to alleviate the state space explosion. Our development work is based on Murphi, which is a popular protocol verification tool. 
+MurphiEDMC is more likely to work well on very complex protocol models at the same cost(e.g., time, memory). In this site, we use it to conduct reachability analysis experiments on Tilelink Cached(TL-C) protocol models.  
 
 
 ## Requirement & Start
 
-Please first check if your environment meets the following requirement: 
+Before starting the installation, please first check if your environment meets the following requirement: 
 1. Operating systems: Linux or MacOS
 2. g++ 9.4.0 
 3. Python 3.8.10
 
-Now let's install MurphiEDMC and its dependencies:
+Then let's install the dependencies:
 ```
+  sudo apt-get install flex bison
   sudo make install 
-  sudo apt-get install flex 
-  sudo apt-get install byacc
-  
+```
+
+Now, we can compile the source code of MurphiEDMC: 
+```  
   # in folder MurphiEDMC
   cd src/  
   make clean
   make
 ```
 
-Install Z3:
+Since MurphiEDMC invokes Z3 when parsing the protocol model, we need to install Z3: 
 ```
   git clone https://github.com/Z3Prover/z3.git
   python scripts/mk_make.py
@@ -43,15 +45,24 @@ Install Z3:
   bash run.sh <testcase_name>
 ```
 
-2. Or if you want to set options with MurphiEDMC as you wish(e.g., -localsearch/-vbfs/vdfs), you can run these commands:
-```
-  ../src/mu <testcase_name>.m    # parser Murphi file to Cpp file
-  g++ -ggdb -o <testcase_name>.o <testcase_name>.cpp -I ../include -lm  # compiler Cpp file to execute file(.o)
-  ./<testcase_name>.o -localsearch -m 5000  # Run execute file with 5000MB memory limitation and local search algorithm
-```
+2. Or if you want to set options with MurphiEDMC as you wish(e.g., -localsearch/-vbfs/vdfs), you can run the following three commands:
+  1. Parser Murphi file to Cpp file: 
+  ```
+    ../src/mu <testcase_name>.m 
+  ```
+
+  2. Compiler Cpp file to execute file(.o): 
+  ```
+    g++ -ggdb -o <testcase_name>.o <testcase_name>.cpp -I ../include -lm  
+  ```
+  
+  3. Run execute file with 5000MB memory limitation and the selected algorithm
+  ```
+    ./<testcase_name>.o -localsearch -m 5000 
+  ```
+
 You can change options to what you want when running execute file. 
 Run "./<testcase_name>.o -h" to show what options are supported in MurphiEDMC. 
-
 
 ## Files organization
 
