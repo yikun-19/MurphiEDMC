@@ -1,0 +1,41 @@
+| state_no |        | BFS     |       |        | DFS    |      |        | AStar    |        |        | EDMC    |        |
+|----------|--------|---------|-------|--------|--------|------|--------|----------|--------|--------|---------|--------|
+|          | status | states  | time  | status | states | time | status | states   | time   | status | states  | time   |
+| 1        | Found  | 1       | 2.39   | Found  | 1       | 2.48   | Found | 1       | 2.37   | Found | 1      | 2.40  |
+| 2        | Found  | 142158  | 7.16   | Found  | 438     | 2.85   | Found | 19063   | 5.39   | Found | 14341  | 4.08  |
+| 3        | Found  | 128884  | 5.96   | Found  | 270     | 2.82   | Found | 18473   | 6.56   | Found | 16267  | 6.27  |
+| 4        | Found  | 13848   | 3.05   | Found  | 107     | 2.88   | Found | 4542    | 2.82   | Found | 4151   | 2.90  |
+| 5        | Found  | 309409  | 9.66   | failed | failed  | 3600   | Found | 26168   | 6.59   | Found | 55951  | 12.97 |
+| 6        | Found  | 336523  | 10.47  | Found  | 2625635 | 177.96 | Found | 64112   | 17.30  | Found | 43859  | 8.84  |
+| 7        | failed | failed  | 3600   | failed | failed  | 3600   | Found | 1301355 | 296.11 | Found | 35898  | 7.73  |
+| 8        | Found  | 103144  | 5.26   | failed | failed  | 3600   | Found | 18694   | 5.21   | Found | 17056  | 4.84  |
+| 9        | Found  | 60414   | 4.01   | Found  | 46      | 2.80   | Found | 18563   | 5.08   | Found | 16189  | 4.58  |
+| 10       | Found  | 5008    | 2.88   | Found  | 9       | 2.90   | Found | 2288    | 2.53   | Found | 2282   | 2.60  |
+| 11       | Found  | 161635  | 7.44   | failed | failed  | 3600   | Found | 40310   | 8.40   | Found | 50258  | 10.72 |
+| 12       | Found  | 254387  | 8.32   | failed | failed  | 3600   | Found | 61213   | 14.55  | Found | 55280  | 12.63 |
+| 13       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 1151599 | 244.77 | Found | 38499  | 8.10  |
+| 14       | Found  | 162     | 2.78   | Found  | 4       | 2.82   | Found | 175     | 2.41   | Found | 172    | 2.35  |
+| 15       | Found  | 18978   | 3.09   | Found  | 542211  | 43.26  | Found | 4277    | 2.72   | Found | 3984   | 2.76  |
+| 16       | Found  | 158968  | 6.26   | failed | failed  | 3600   | Found | 8967    | 3.48   | Found | 20671  | 5.29  |
+| 17       | Found  | 158786  | 7.79   | Found  | 652806  | 52.66  | Found | 11485   | 3.70   | Found | 12648  | 3.80  |
+| 18       | Found  | 1605373 | 51.69  | failed | failed  | 3600   | Found | 108288  | 25.59  | Found | 37641  | 7.91  |
+| 19       | Found  | 17274   | 2.92   | failed | failed  | 3600   | Found | 5510    | 3.26   | Found | 4215   | 2.70  |
+| 20       | Found  | 157136  | 7.23   | failed | failed  | 3600   | Found | 24593   | 6.61   | Found | 20886  | 5.21  |
+| 21       | Found  | 150134  | 7.30   | failed | failed  | 3600   | Found | 23703   | 5.98   | Found | 10673  | 3.51  |
+| 22       | Found  | 1541171 | 56.74  | failed | failed  | 3600   | Found | 116282  | 25.88  | Found | 37924  | 7.85  |
+| 23       | Found  | 753325  | 29.31  | failed | failed  | 3600   | Found | 102378  | 23.29  | Found | 83390  | 17.47 |
+| 24       | Found  | 3183468 | 112.95 | failed | failed  | 3600   | Found | 373338  | 72.45  | Found | 38734  | 7.97  |
+| 25       | Found  | 3183327 | 98.84  | failed | failed  | 3600   | Found | 187962  | 38.63  | Found | 69310  | 13.38 |
+| 26       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 456486  | 91.25  | Found | 16659  | 4.35  |
+| 27       | Found  | 3290319 | 111.30 | failed | failed  | 3600   | Found | 231961  | 45.77  | Found | 66110  | 12.54 |
+| 28       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 318907  | 61.94  | Found | 18666  | 4.80  |
+| 29       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 569568  | 108.88 | Found | 17289  | 4.42  |
+| 30       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 759664  | 146.99 | Found | 4525   | 2.83  |
+| 31       | Found  | 3178077 | 113.79 | failed | failed  | 3600   | Found | 223488  | 46.72  | Found | 116461 | 24.76 |
+| 32       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 512307  | 97.68  | Found | 48310  | 10.37 |
+| 33       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 539518  | 106.71 | Found | 105718 | 23.90 |
+| 34       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 782550  | 153.94 | Found | 7391   | 3.22  |
+| 35       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 441395  | 84.50  | Found | 29382  | 6.58  |
+| 36       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 898347  | 166.01 | Found | 13326  | 4.38  |
+| 37       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 753417  | 144.68 | Found | 18395  | 5.55  |
+| 38       | failed | failed  | 3600   | failed | failed  | 3600   | Found | 1421664 | 270.02 | Found | 2054   | 2.64  |
