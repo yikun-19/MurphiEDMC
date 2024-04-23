@@ -1,0 +1,86 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Apr 10 2024
+Include files last modified date:    Jul 23 2021
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.5.0
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.5.0 is based on various versions of Murphi.
+Caching Murphi Release 5.5.0 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: ./protocols/exec/TL-C_In_S_nodata/TL-C_In_S_nodata_inv30
+
+Algorithm:
+	Verification by depth first search.
+	with symmetry algorithm 3 -- Heuristic Small Memory Normalization
+	with permutation trial limit 10.
+
+Memory usage:
+
+	* The size of each state is 1456 bits (rounded up to 184 bytes).
+	* The memory allocated for the hash table and state queue is
+	  10485 Mbytes.
+	  With two words of overhead per state, the maximum size of
+	  the state space is 48366083 states.
+	   * Use option "-k" or "-m" to increase this, if necessary.
+	* Capacity in queue for depth-first search: 4836608 states.
+	   * Change the constant gPercentActiveStates in mu_prolog.inc
+	     to increase this, if necessary.
+
+Warning: No trace will not be printed in the case of protocol errors!
+         Check the options if you want to have error traces.
+
+Progress Report:
+
+	100000 states explored in 4.47s, with 306852 rules fired and 51904 states in the queue.
+	200000 states explored in 5.67s, with 654025 rules fired and 97767 states in the queue.
+	300000 states explored in 6.87s, with 1005278 rules fired and 144000 states in the queue.
+	400000 states explored in 8.14s, with 1384591 rules fired and 184104 states in the queue.
+	500000 states explored in 9.39s, with 1762827 rules fired and 226699 states in the queue.
+	600000 states explored in 10.63s, with 2137189 rules fired and 269822 states in the queue.
+	700000 states explored in 11.95s, with 2540576 rules fired and 309333 states in the queue.
+	800000 states explored in 13.29s, with 2952346 rules fired and 344825 states in the queue.
+	900000 states explored in 14.65s, with 3375500 rules fired and 380185 states in the queue.
+	1000000 states explored in 16.04s, with 3817930 rules fired and 411407 states in the queue.
+	1100000 states explored in 17.37s, with 4235790 rules fired and 447955 states in the queue.
+	1200000 states explored in 18.77s, with 4680601 rules fired and 480017 states in the queue.
+	1300000 states explored in 20.14s, with 5118735 rules fired and 514734 states in the queue.
+	1400000 states explored in 21.51s, with 5560363 rules fired and 550146 states in the queue.
+	1500000 states explored in 22.91s, with 6015811 rules fired and 582379 states in the queue.
+	1600000 states explored in 24.28s, with 6455173 rules fired and 618228 states in the queue.
+	1700000 states explored in 25.72s, with 6924524 rules fired and 648964 states in the queue.
+	1800000 states explored in 27.12s, with 7366895 rules fired and 683686 states in the queue.
+	1900000 states explored in 28.51s, with 7812835 rules fired and 717191 states in the queue.
+	2000000 states explored in 29.92s, with 8279702 rules fired and 749987 states in the queue.
+
+==========================================================================
+
+Result:
+
+	Invariant "test_reachable_state_30" failed.
+
+State Space Explored:
+
+	2039973 states, 8471562 rules fired in 30.51s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.

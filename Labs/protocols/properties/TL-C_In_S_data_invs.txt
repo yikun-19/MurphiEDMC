@@ -1,0 +1,113 @@
+invariant "test_reachable_state_1"
+    !( Tree[1].cache.state = None & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_2"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Trunk & Tree[6].cache.state = None & Tree[7].cache.state = Tip );
+
+invariant "test_reachable_state_3"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Trunk & Tree[6].cache.state = Tip & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_4"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Tip & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_5"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Tip & Tree[6].cache.state = None & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_6"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Tip & Tree[6].cache.state = Branch & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_7"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Tip & Tree[6].cache.state = Branch & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_8"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = Trunk & Tree[4].cache.state = None & Tree[5].cache.state = Tip & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_9"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = Trunk & Tree[4].cache.state = Tip & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_10"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = Tip & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_11"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = Tip & Tree[4].cache.state = None & Tree[5].cache.state = Branch & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_12"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = Tip & Tree[4].cache.state = Branch & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_13"
+    !( Tree[1].cache.state = Trunk & Tree[2].cache.state = Tip & Tree[4].cache.state = Branch & Tree[5].cache.state = Branch & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_14"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_15"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_16"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_17"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_18"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = None & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_19"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_20"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = Branch & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_21"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = None & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_22"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = Branch & Tree[3].cache.state = None & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_23"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_24"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_25"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_26"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_27"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_28"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_29"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_30"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = None & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_31"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_32"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_33"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_34"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = None & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_35"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_36"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = None & Tree[7].cache.state = Branch );
+
+invariant "test_reachable_state_37"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = None );
+
+invariant "test_reachable_state_38"
+    !( Tree[1].cache.state = Tip & Tree[2].cache.state = Branch & Tree[4].cache.state = Branch & Tree[5].cache.state = Branch & Tree[3].cache.state = Branch & Tree[6].cache.state = Branch & Tree[7].cache.state = Branch );

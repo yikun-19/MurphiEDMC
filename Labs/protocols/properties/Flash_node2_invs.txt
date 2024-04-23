@@ -1,0 +1,18 @@
+invariant "test_1"
+  !(Sta.Proc[1].CacheState = CACHE_I & Sta.Proc[2].CacheState = CACHE_I);
+
+invariant "test_2"
+  !(Sta.Proc[1].CacheState = CACHE_I & Sta.Proc[2].CacheState = CACHE_S);
+
+invariant "test_3"
+  !(Sta.Proc[1].CacheState = CACHE_I & Sta.Proc[2].CacheState = CACHE_E);
+
+invariant "test_4"
+  !(Sta.Proc[1].CacheState = CACHE_S & Sta.Proc[2].CacheState = CACHE_I);
+
+invariant "test_5"
+  !(Sta.Proc[1].CacheState = CACHE_S & Sta.Proc[2].CacheState = CACHE_S);
+
+invariant "test_6"
+  !(Sta.Proc[1].CacheState = CACHE_E & Sta.Proc[2].CacheState = CACHE_I);
+
