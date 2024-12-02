@@ -1,0 +1,128 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Jul 24 2024
+Include files last modified date:    Jul 23 2021
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.5.0
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.5.0 is based on various versions of Murphi.
+Caching Murphi Release 5.5.0 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: ./protocols/exec/Flash_node4/Flash_node4_inv11
+
+Algorithm:
+	Verification by breadth first search.
+	with symmetry algorithm 3 -- Heuristic Small Memory Normalization
+	with permutation trial limit 10.
+
+Memory usage:
+
+	* The size of each state is 512 bits (rounded up to 64 bytes).
+	* The memory allocated for the hash table and state queue is
+	  10485 Mbytes.
+	  With two words of overhead per state, the maximum size of
+	  the state space is 108323977 states.
+	   * Use option "-k" or "-m" to increase this, if necessary.
+	* Capacity in queue for breadth-first search: 10832397 states.
+	   * Change the constant gPercentActiveStates in mu_prolog.inc
+	     to increase this, if necessary.
+
+Warning: No trace will not be printed in the case of protocol errors!
+         Check the options if you want to have error traces.
+Sta.Proc[1].ProcCmd:NODE_None
+Sta.Proc[1].InvMarked:false
+Sta.Proc[1].CacheState:CACHE_I
+Sta.Proc[2].ProcCmd:NODE_None
+Sta.Proc[2].InvMarked:false
+Sta.Proc[2].CacheState:CACHE_I
+Sta.Proc[3].ProcCmd:NODE_None
+Sta.Proc[3].InvMarked:false
+Sta.Proc[3].CacheState:CACHE_I
+Sta.Proc[4].ProcCmd:NODE_None
+Sta.Proc[4].InvMarked:false
+Sta.Proc[4].CacheState:CACHE_I
+Sta.HomeProc.ProcCmd:NODE_None
+Sta.HomeProc.InvMarked:false
+Sta.HomeProc.CacheState:CACHE_I
+Sta.Dir.Pending:false
+Sta.Dir.Local:false
+Sta.Dir.Dirty:false
+Sta.Dir.HeadVld:false
+Sta.Dir.HeadPtr:4
+Sta.Dir.HomeHeadPtr:false
+Sta.Dir.ShrVld:false
+Sta.Dir.ShrSet[1]:false
+Sta.Dir.ShrSet[2]:false
+Sta.Dir.ShrSet[3]:false
+Sta.Dir.ShrSet[4]:false
+Sta.Dir.HomeShrSet:false
+Sta.Dir.InvSet[1]:false
+Sta.Dir.InvSet[2]:false
+Sta.Dir.InvSet[3]:false
+Sta.Dir.InvSet[4]:false
+Sta.Dir.HomeInvSet:false
+Sta.UniMsg[1].Cmd:UNI_None
+Sta.UniMsg[1].Proc:4
+Sta.UniMsg[1].HomeProc:true
+Sta.UniMsg[2].Cmd:UNI_None
+Sta.UniMsg[2].Proc:4
+Sta.UniMsg[2].HomeProc:true
+Sta.UniMsg[3].Cmd:UNI_None
+Sta.UniMsg[3].Proc:4
+Sta.UniMsg[3].HomeProc:true
+Sta.UniMsg[4].Cmd:UNI_None
+Sta.UniMsg[4].Proc:4
+Sta.UniMsg[4].HomeProc:true
+Sta.HomeUniMsg.Cmd:UNI_None
+Sta.HomeUniMsg.Proc:4
+Sta.HomeUniMsg.HomeProc:true
+Sta.InvMsg[1].Cmd:INV_None
+Sta.InvMsg[2].Cmd:INV_None
+Sta.InvMsg[3].Cmd:INV_None
+Sta.InvMsg[4].Cmd:INV_None
+Sta.HomeInvMsg.Cmd:INV_None
+Sta.RpMsg[1].Cmd:RP_None
+Sta.RpMsg[2].Cmd:RP_None
+Sta.RpMsg[3].Cmd:RP_None
+Sta.RpMsg[4].Cmd:RP_None
+Sta.HomeRpMsg.Cmd:RP_None
+Sta.WbMsg.Cmd:WB_None
+Sta.WbMsg.Proc:4
+Sta.WbMsg.HomeProc:false
+Sta.ShWbMsg.Cmd:SHWB_None
+Sta.ShWbMsg.Proc:4
+Sta.ShWbMsg.HomeProc:false
+Sta.NakcMsg.Cmd:NAKC_None
+target state's depth is: 0
+
+==========================================================================
+
+Result:
+
+	Invariant "test_11" failed.
+
+State Space Explored:
+
+	121 states, 234 rules fired in 2.63s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.

@@ -1,0 +1,18 @@
+invariant "test_1"
+  !(node[1].cache[1].state = INVALID & node[2].cache[1].state = INVALID);
+
+invariant "test_2"
+  !(node[1].cache[1].state = INVALID & node[2].cache[1].state = VALID);
+
+invariant "test_3"
+  !(node[1].cache[1].state = INVALID & node[2].cache[1].state = DIRTY);
+
+invariant "test_4"
+  !(node[1].cache[1].state = VALID & node[2].cache[1].state = INVALID);
+
+invariant "test_5"
+  !(node[1].cache[1].state = VALID & node[2].cache[1].state = VALID);
+
+invariant "test_6"
+  !(node[1].cache[1].state = DIRTY & node[2].cache[1].state = INVALID);
+

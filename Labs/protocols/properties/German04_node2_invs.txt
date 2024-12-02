@@ -1,0 +1,18 @@
+invariant "test_1"
+  !(node[1].cache[0].state = cache_invalid & node[2].cache[0].state = cache_invalid);
+
+invariant "test_2"
+  !(node[1].cache[0].state = cache_invalid & node[2].cache[0].state = cache_shared);
+
+invariant "test_3"
+  !(node[1].cache[0].state = cache_invalid & node[2].cache[0].state = cache_exclusive);
+
+invariant "test_4"
+  !(node[1].cache[0].state = cache_shared & node[2].cache[0].state = cache_invalid);
+
+invariant "test_5"
+  !(node[1].cache[0].state = cache_shared & node[2].cache[0].state = cache_shared);
+
+invariant "test_6"
+  !(node[1].cache[0].state = cache_exclusive & node[2].cache[0].state = cache_invalid);
+

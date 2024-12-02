@@ -1,0 +1,82 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Apr 18 2024
+Include files last modified date:    Jul 23 2021
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.5.0
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.5.0 is based on various versions of Murphi.
+Caching Murphi Release 5.5.0 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: ./protocols/exec/Flash_node2/Flash_node2_inv3
+===========================================
+  You are using LS algorithm.  
+===========================================
+
+===== Startstates are generated! =====
+Carelist Layer 0: Sta.Proc[1].CacheState Sta.Proc[2].CacheState 
+Carelist Layer 1: Sta.InvMsg[node].Cmd Sta.UniMsg[node].Cmd Sta.Proc[node].ProcCmd Sta.HomeUniMsg.Cmd Sta.HomeUniMsg.Proc Sta.HomeUniMsg.HomeProc Sta.Proc[node].CacheState Sta.UniMsg[node].Proc Sta.UniMsg[node].HomeProc 
+Carelist Layer 2: Sta.Dir.Pending Sta.Dir.InvSet[node] Sta.Dir.Dirty Sta.Dir.HomeInvSet Sta.Dir.Local Sta.Dir.HeadVld Sta.Dir.HeadPtr Sta.Dir.HomeHeadPtr Sta.Dir.ShrSet[node] Sta.Dir.HomeShrSet Sta.HomeProc.ProcCmd Sta.HomeProc.CacheState Sta.RpMsg[node].Cmd 
+Carelist Layer 3: Sta.ShWbMsg.Cmd Sta.NakcMsg.Cmd Sta.WbMsg.Cmd Sta.HomeRpMsg.Cmd 
+Attr: Sta.HomeRpMsg.Cmd Level: 3 Wi: 2
+Attr: Sta.WbMsg.Cmd Level: 3 Wi: 2
+Attr: Sta.ShWbMsg.Cmd Level: 3 Wi: 2
+Attr: Sta.HomeProc.CacheState Level: 2 Wi: 4
+Attr: Sta.Dir.ShrSet[node] Level: 2 Wi: 4
+Attr: Sta.Dir.HomeHeadPtr Level: 2 Wi: 4
+Attr: Sta.Dir.HomeShrSet Level: 2 Wi: 4
+Attr: Sta.Dir.HeadPtr Level: 2 Wi: 4
+Attr: Sta.Dir.HeadVld Level: 2 Wi: 4
+Attr: Sta.HomeUniMsg.Cmd Level: 1 Wi: 8
+Attr: Sta.RpMsg[node].Cmd Level: 2 Wi: 4
+Attr: Sta.UniMsg[node].Cmd Level: 1 Wi: 8
+Attr: Sta.Dir.Dirty Level: 2 Wi: 4
+Attr: Sta.Dir.HomeInvSet Level: 2 Wi: 4
+Attr: Sta.NakcMsg.Cmd Level: 3 Wi: 2
+Attr: Sta.Proc[node].ProcCmd Level: 1 Wi: 8
+Attr: Sta.InvMsg[node].Cmd Level: 1 Wi: 8
+Attr: Sta.UniMsg[node].HomeProc Level: 1 Wi: 8
+Attr: Sta.Proc[2].CacheState Level: 0 Wi: 16
+Attr: Sta.HomeUniMsg.HomeProc Level: 1 Wi: 8
+Attr: Sta.Proc[node].CacheState Level: 1 Wi: 8
+Attr: Sta.Dir.Pending Level: 2 Wi: 4
+Attr: Sta.UniMsg[node].Proc Level: 1 Wi: 8
+Attr: Sta.HomeProc.ProcCmd Level: 2 Wi: 4
+Attr: Sta.Dir.InvSet[node] Level: 2 Wi: 4
+Attr: Sta.HomeUniMsg.Proc Level: 1 Wi: 8
+Attr: Sta.Proc[1].CacheState Level: 0 Wi: 16
+Attr: Sta.Dir.Local Level: 2 Wi: 4
+
+===== Init heuristics! =====
+
+==========================================================================
+
+Result:
+
+	Invariant "test_3" failed.
+
+State Space Explored:
+
+	446 states, 604 rules fired in 2.72s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.

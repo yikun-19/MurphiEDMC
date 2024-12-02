@@ -1,0 +1,69 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: May 21 2024
+Include files last modified date:    Jul 23 2021
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.5.0
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.5.0 is based on various versions of Murphi.
+Caching Murphi Release 5.5.0 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: ./protocols/exec/Godsont_node2/Godsont_node2_inv6
+===========================================
+  You are using EDMC algorithm.  
+===========================================
+
+===== Startstates are generated! =====
+Carelist Layer 0: node[1].cache[0].state node[2].cache[0].state 
+Carelist Layer 1: node[node].inchan[node].msg.addr node[node].inchan[node].msg.source node[node].inchan[node].valid node[node].home_requests[node].status node[node].inchan[node].msg.op node[node].remote_requests[node].status node[node].remote_requests[node].op 
+Carelist Layer 2: node[node].outchan[node].msg.dest node[node].outchan[node].valid node[node].home_requests[node].source 
+Carelist Layer 3: node[node].home_requests[node].invalidate_list[node] node[node].local_requests[node] node[node].cache[node].state 
+Attr: node[node].local_requests[node] Level: 3 Wi: 2
+Attr: node[node].home_requests[node].invalidate_list[node] Level: 3 Wi: 2
+Attr: node[node].home_requests[node].source Level: 2 Wi: 4
+Attr: node[node].outchan[node].msg.dest Level: 2 Wi: 4
+Attr: node[node].outchan[node].valid Level: 2 Wi: 4
+Attr: node[node].remote_requests[node].op Level: 1 Wi: 8
+Attr: node[node].remote_requests[node].status Level: 1 Wi: 8
+Attr: node[node].cache[node].state Level: 3 Wi: 2
+Attr: node[2].cache[0].state Level: 0 Wi: 16
+Attr: node[1].cache[0].state Level: 0 Wi: 16
+Attr: node[node].inchan[node].msg.op Level: 1 Wi: 8
+Attr: node[node].home_requests[node].status Level: 1 Wi: 8
+Attr: node[node].inchan[node].msg.addr Level: 1 Wi: 8
+Attr: node[node].inchan[node].valid Level: 1 Wi: 8
+Attr: node[node].inchan[node].msg.source Level: 1 Wi: 8
+
+===== Init heuristics! =====
+
+==========================================================================
+
+Result:
+
+	Invariant "test_6" failed.
+
+State Space Explored:
+
+	95 states, 100 rules fired in 2.51s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.

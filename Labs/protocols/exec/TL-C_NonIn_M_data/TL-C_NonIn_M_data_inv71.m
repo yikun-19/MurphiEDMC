@@ -1258,10 +1258,6 @@ auxData[a] := memData[a];
 endrule;
 endruleset;
 
-
-
-
-
 invariant "test_reachable_state_71"
 forall a:addrType do
 !( Tree[1].cache[1].state = None & Tree[2].cache[1].state = Branch & Tree[4].cache[1].state = Branch & Tree[5].cache[1].state = Branch & Tree[3].cache[1].state = Branch & Tree[6].cache[1].state = None & Tree[7].cache[1].state = None )

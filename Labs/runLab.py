@@ -15,18 +15,24 @@ Murphi_path = '../../Murphis/MurphiFast/'
 mu_compile = Murphi_path + 'src/mu'
 mu_include = Murphi_path + 'include/'
 
-algorithms_list = ['BFS', 'DFS', 'IDAstar', 'EDMC', 'LS']
-models_list = ['TL-C_In_S_nodata', 'TL-C_In_S_data', 'TL-C_NonIn_S_nodata', 'TL-C_NonIn_S_data',
-                'TL-C_In_M_data', 'TL-C_NonIn_M_data',
-                'German_node2', 'German_node4', 'German_node8', 'Flash_node2', 'Flash_node4', 'Flash_node8']
-models_list1 = ['TL-C_In_S_nodata', 'TL-C_In_S_data', 'TL-C_NonIn_S_nodata', 'TL-C_NonIn_S_data',
+models_list = ['TL-C_In_S_nodata', 'TL-C_In_S_data', 'TL-C_NonIn_S_nodata', 'TL-C_NonIn_S_data', 'TL-C_In_M_data', 'TL-C_NonIn_M_data',
+                'German_node2', 'German_node4', 'German_node8', 'Flash_node2', 'Flash_node4', 'Flash_node8',
+               'Godsont_node2', 'Godsont_node4', 'Godsont_node8'] # , 'German04_node2', 'German04_node4', 'German04_node8'
+models_list1 = ['TL-C_In_S_nodata', 'TL-C_In_S_data',
+                'TL-C_NonIn_S_nodata', 'TL-C_NonIn_S_data',
                'TL-C_In_M_data', 'TL-C_NonIn_M_data']
-models_list2 = ['German_node2', 'German_node4', 'German_node8', 'Flash_node2', 'Flash_node4', 'Flash_node8']
+models_list2 = ['German_node2', 'German_node4', 'German_node8',
+                'Flash_node2', 'Flash_node4', 'Flash_node8',
+               'Godsont_node2', 'Godsont_node4', 'Godsont_node8'] # 'German04_node2', 'German04_node4', 'German04_node8'
+
+algorithms_list = ['BFS', 'DFS', 'IDAstar', 'EDMC', 'LS']
 algo_option_dict = {'BFS':'-vbfs', 'DFS':'-vdfs', 'EDMC':'-edmc', 'LS':'-ls', 'IDAstar':'-idastar'}
 models_inv_dict = {'TL-C_In_S_nodata':38, 'TL-C_In_S_data':38, 'TL-C_NonIn_S_nodata':224, 'TL-C_NonIn_S_data':224,
                'TL-C_In_M_data':38, 'TL-C_NonIn_M_data':224,
                'German_node2':6, 'German_node4':20, 'German_node8':264,
-               'Flash_node2':6, 'Flash_node4':20, 'Flash_node8':264}
+               'Flash_node2':6, 'Flash_node4':20, 'Flash_node8':264,
+               'Godsont_node2':6, 'Godsont_node4':20, 'Godsont_node8':264,
+               'German04_node2':6, 'German04_node4':20, 'German04_node8':264}
 
 
 class ResultItem:
@@ -111,7 +117,7 @@ def murphi_callback(info):
 def run_lab(algorithm, model):
 
     cutoff_time = 3600
-    max_pros = 10
+    max_pros = 50
     # lb = 224
     # rb = 225
     lb = 1
@@ -199,9 +205,8 @@ def check_murphi_logs():
                     writer.writerow([algo, model, f'inv_{str(i)}',
                                      result_list['result'], result_list['states'], result_list['time']])
 
-        algorithms_list2 = ['EDMC+H0', 'EDMC+H1', 'EDMC+H2', 'EDMC+H3',
-                            'LS+H0', 'LS+H1', 'LS+H2', 'LS+H3',
-                            'LS+MP+H1', 'LS+MP+H2', 'LS+MP+H3']
+        algorithms_list2 = ['EDMC+H1', 'EDMC+H2', 'EDMC+H3',
+                            'LS+H1', 'LS+H2', 'LS+H3']
         for algo in algorithms_list2:
             for model in models_list:
                 for i in range(1, models_inv_dict[model]+1):
@@ -242,26 +247,85 @@ def summary_results():
             writer.writerow([algorithm, model, values['PAR2']/models_inv_dict[model], values['Solved']])
 
 
+def get_hvalue_lines():
+
+    murphi_run('EDMC', 'TL-C_NonIn_M_data', 155, cutoff=60)
+
+    murphi_run('LS', 'TL-C_NonIn_M_data', 155, cutoff=60)
+
+def calculate_average_depth(model_name):
+    # 存储所有目标深度
+    depths = []
+    model_path = './results/Exp-2.1/LS/' + model_name
+
+    # 遍历文件夹中的所有文件
+    for filename in os.listdir(model_path):
+        file_path = os.path.join(model_path, filename)
+        
+        # 只处理文件（忽略子文件夹）
+        if os.path.isfile(file_path):
+            with open(file_path, 'r') as file:
+                content = file.read()
+                # 使用正则表达式提取目标深度
+                match = re.search(r'target state\'s depth is: (\d+)', content)
+                if match:
+                    depth = int(match.group(1))
+                    depths.append(depth)
+    
+    # print(depths)
+    # 计算平均深度
+    if depths:
+        average_depth = sum(depths) / len(depths)
+    else:
+        average_depth = 0
+
+    return average_depth
+
+def calculate_average_depth_for_models():
+
+    for model in models_list:
+        average_depth = calculate_average_depth(model)
+        print(f'Model: {model}, Average Depth: {average_depth}')
+
+
 if __name__ == '__main__':
 
     algo_test = 'LS'
-    model_test = 'TL-C_NonIn_M_data'
+    model_test = 'German04_node8'
 
-    models_list_test = ['TL-C_In_S_nodata', 'TL-C_In_S_data', 'TL-C_NonIn_S_nodata',
-                        'TL-C_NonIn_S_data', 'TL-C_In_M_data']
+    # models_list_test = [
+    #     # 'German04_node2', 'German04_node4', 'German04_node8'
+    #     'Godsont_node2', 'Godsont_node4', 'Godsont_node8'
+    # ]
 
     # rename_exec_cppfile()
 
-    # for model in models_list2:
+    # for model in models_list:
     #     handle_murphi_file(model)
     # handle_murphi_file(model_test)
+    
+    # for algo in algorithms_list:
+    #     for model in models_list:
+    #         run_lab(algo, model)
+    
+    # for algo in algorithms_list:
+    #     run_lab(algo, model_test)
 
-    for model in models_list:
-        run_lab(algo_test, model)
+    # for model in models_list:
+    #     run_lab('EDMC', model) # LS 算法运行
+
+    # run_lab('EDMC', 'TL-C_NonIn_M_data')
+    # run_lab('LS', 'Godsont_node8')
+
+    # for model in models_list:
+    #     run_lab('LS', model)
+
+
     # run_lab(algo_test, model_test)
 
     # murphi_run(algo_test, model_test, 2, cutoff=3600)
-    # carelist 的纠正，LS 调优，死锁场景的复现
-    # check_murphi_logs()
-    # summary_results()
+    #
+    check_murphi_logs()
+    summary_results()
 
+    # calculate_average_depth_for_models()

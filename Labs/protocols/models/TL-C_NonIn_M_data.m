@@ -390,7 +390,26 @@ Tree[i].cache[a].state := Trunk;
 Tree[i].slave_pending[b][a] := pending_GrantAck;
 endrule;
 
-
+rule "Ln_receive_AcquirePerm_Tip_None_None"
+Tree[i].chanA[b].opcode = AcquirePerm &
+                          Tree[i].chanA[b].addr = a &
+                                                  Tree[i].cache[a].state = Tip &
+                                                                           forall k : branchType do
+(k != b -> Tree[i].directory[k][a] = None) &
+Tree[i].slave_pending[k][a] = S_None
+        endforall &
+Tree[i].directory[b][a] = None
+==>
+begin
+        Tree[i].chanA[b].opcode := A_None;
+Tree[i].chanD[b].opcode := GrantData;
+Tree[i].chanD[b].para := toT;
+Tree[i].chanD[b].addr := a;
+Tree[i].chanD[b].data := Tree[i].cache[a].data;
+Tree[i].directory[b][a] := Tip;
+Tree[i].cache[a].state := Trunk;
+Tree[i].slave_pending[b][a] := pending_GrantAck;
+endrule;
 
 rule "Ln_receive_AcquirePerm_Tip_x_Branch"
 Tree[i].chanA[b].opcode = AcquirePerm &
@@ -1238,7 +1257,3 @@ Tree[1].cache[a].data := memData[a];
 auxData[a] := memData[a];
 endrule;
 endruleset;
-
-
-
-
